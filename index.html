@@ -110,6 +110,14 @@ nav.site a{
   border-bottom:2px solid transparent; padding-bottom:4px; transition:0.2s;
 }
 nav.site a:hover, nav.site a.current{ border-bottom-color:var(--color-accent); color:var(--color-accent-text); }
+.nav-toggle{
+  display:none; flex-direction:column; justify-content:center; gap:5px;
+  background:none; border:none; cursor:pointer; padding:0.4rem;
+}
+.nav-toggle span{ width:24px; height:2px; background:var(--color-text); border-radius:2px; transition:0.2s; }
+header.site.mobile-nav-open .nav-toggle span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+header.site.mobile-nav-open .nav-toggle span:nth-child(2){ opacity:0; }
+header.site.mobile-nav-open .nav-toggle span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
 
 /* ===================== STRUCTURE GENERALE ===================== */
 .page{ display:none; }
@@ -485,7 +493,16 @@ img.ph{ object-fit:cover; border-radius:8px; }
   .domains-grid{ grid-template-columns:1fr 1fr; }
   .header-right{ gap:0.8rem; }
   .hero{ grid-template-columns:1fr; }
-  nav.site ul{ display:none; }
+  header.site{ position:relative; }
+  .nav-toggle{ display:flex; }
+  nav.site ul{
+    display:none; position:absolute; top:100%; right:4%; left:auto;
+    flex-direction:column; gap:1rem; margin-top:0.6rem;
+    background:var(--color-bg-card); border:1px solid var(--color-border);
+    border-radius:10px; padding:1.2rem 1.6rem; min-width:210px;
+    box-shadow:0 12px 32px rgba(0,0,0,.18); z-index:80;
+  }
+  header.site.mobile-nav-open nav.site ul{ display:flex; }
   .projects-grid{ grid-template-columns:1fr 1fr; }
   .domains{ grid-template-columns:1fr; }
   .simple-steps{ grid-template-columns:1fr 1fr; }
@@ -515,6 +532,7 @@ img.ph{ object-fit:cover; border-radius:8px; }
 
   <header class="site">
     <div class="logo"><span style="color:var(--color-gold);">Nath</span><span style="color:var(--color-gold);">Pro</span> Conseil</div>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" onclick="this.closest('header').classList.toggle('mobile-nav-open')"><span></span><span></span><span></span></button>
     <nav class="site"><ul>
       <li><a href="#" class="current">Accueil</a></li>
       <li><a href="/apropos" onclick="goToPage('apropos'); return false;">Qui sommes-nous ?</a></li>
@@ -785,6 +803,7 @@ img.ph{ object-fit:cover; border-radius:8px; }
 
   <header class="site">
     <div class="logo"><span style="color:var(--color-gold);">Nath</span><span style="color:var(--color-gold);">Pro</span> Conseil</div>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" onclick="this.closest('header').classList.toggle('mobile-nav-open')"><span></span><span></span><span></span></button>
     <nav class="site"><ul>
       <li><a href="/" onclick="goToPage('accueil'); return false;">Accueil</a></li>
       <li><a href="#" class="current">Qui sommes-nous ?</a></li>
@@ -889,6 +908,7 @@ img.ph{ object-fit:cover; border-radius:8px; }
 
   <header class="site">
     <div class="logo"><span style="color:var(--color-gold);">Nath</span><span style="color:var(--color-gold);">Pro</span> Conseil</div>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" onclick="this.closest('header').classList.toggle('mobile-nav-open')"><span></span><span></span><span></span></button>
     <nav class="site"><ul>
       <li><a href="/" onclick="goToPage('accueil'); return false;">Accueil</a></li>
       <li><a href="/apropos" onclick="goToPage('apropos'); return false;">Qui sommes-nous ?</a></li>
@@ -1131,6 +1151,12 @@ function goToRealisations(){
   }, 50);
   return false;
 }
+
+document.addEventListener('click', e => {
+  if(e.target.closest('nav.site a')){
+    document.querySelectorAll('header.site.mobile-nav-open').forEach(h => h.classList.remove('mobile-nav-open'));
+  }
+});
 
 window.addEventListener('popstate', () => {
   goToPage(PATH_PAGES[location.pathname] || 'accueil', false);
