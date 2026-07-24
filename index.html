@@ -518,7 +518,13 @@ img.ph{ object-fit:cover; border-radius:8px; }
   .about-unified-stats > div{ border-right:none; border-bottom:1px solid var(--color-border); }
   .about-unified-story{ padding:1.4rem; }
   .exp-section .exp-row, .exp-section:nth-of-type(even) .exp-row{ grid-template-columns:1fr; direction:ltr; }
-  .expertise-nav{ grid-template-columns:1fr 1fr; }
+  .expertise-nav{
+    grid-template-columns:1fr 1fr;
+    position:sticky; top:0; z-index:90;
+    background:var(--color-bg); padding:0.6rem 0 0.8rem;
+    border-bottom:1px solid var(--color-border);
+  }
+  .exp-section{ scroll-margin-top:0.8rem; }
   .cta-banner{ flex-direction:column; align-items:flex-start; }
   .expertise-row, .expertise-row:nth-child(even){ grid-template-columns:1fr; direction:ltr; }
 }
@@ -925,12 +931,13 @@ img.ph{ object-fit:cover; border-radius:8px; }
       <p class="eyebrow">Nos expertises</p>
       <h1 style="font-size:1.8rem;">Quatre savoir-faire, un seul objectif</h1>
       <p class="muted">Que vous ayez besoin de repenser un espace, d'optimiser vos ventes, de former vos équipes ou d'améliorer le confort de travail, chaque expertise répond à un besoin concret — et toutes peuvent se combiner selon votre projet.</p>
-      <div class="expertise-nav">
-        <a href="#exp-agencement"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9v11h18V9"/><line x1="9" y1="20" x2="9" y2="13"/><line x1="15" y1="20" x2="15" y2="13"/></svg> Agencement &amp; rénovation</a>
-        <a href="#exp-merchandising"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg> Merchandising officinal</a>
-        <a href="#exp-formation"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M5 21c0-4 3-6 7-6s7 2 7 6"/></svg> Formation &amp; coaching</a>
-        <a href="#exp-ergonomie"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><line x1="2" y1="20" x2="22" y2="20"/></svg> Bureau ergonomique</a>
-      </div>
+    </div>
+
+    <div class="expertise-nav">
+      <a href="#exp-agencement" onclick="return scrollToExpertise('exp-agencement');"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9v11h18V9"/><line x1="9" y1="20" x2="9" y2="13"/><line x1="15" y1="20" x2="15" y2="13"/></svg> Agencement &amp; rénovation</a>
+      <a href="#exp-merchandising" onclick="return scrollToExpertise('exp-merchandising');"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg> Merchandising officinal</a>
+      <a href="#exp-formation" onclick="return scrollToExpertise('exp-formation');"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M5 21c0-4 3-6 7-6s7 2 7 6"/></svg> Formation &amp; coaching</a>
+      <a href="#exp-ergonomie" onclick="return scrollToExpertise('exp-ergonomie');"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><line x1="2" y1="20" x2="22" y2="20"/></svg> Bureau ergonomique</a>
     </div>
 
     <div class="exp-section" id="exp-agencement">
@@ -1140,6 +1147,23 @@ function goToPage(id, pushState){
   activatePage(id);
   window.scrollTo(0,0);
   if(pushState !== false) history.pushState({ page: id }, '', PAGE_PATHS[id] || '/');
+  return false;
+}
+
+function scrollToExpertise(id){
+  const el = document.getElementById(id);
+  if(el){
+    el.style.transition = 'none';
+    el.classList.add('visible');
+    el.getBoundingClientRect();
+    const nav = document.querySelector('.expertise-nav');
+    const isSticky = nav && getComputedStyle(nav).position === 'sticky';
+    const offset = isSticky ? nav.offsetHeight + 12 : 0;
+    const top = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+    requestAnimationFrame(() => { el.style.transition = ''; });
+  }
+  history.replaceState(null, '', '#' + id);
   return false;
 }
 
