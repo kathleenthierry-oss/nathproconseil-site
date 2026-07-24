@@ -101,8 +101,9 @@ header.site{
   background:var(--color-bg-card);
   border-bottom:1px solid var(--color-border);
 }
-.logo{ font-family:var(--font-heading); font-size:1.5rem; font-weight:700; }
+.logo{ font-family:var(--font-heading); font-size:1.5rem; font-weight:700; display:flex; align-items:center; }
 .logo span{ color:var(--color-accent-text); }
+.logo img{ height:40px; width:auto; display:block; }
 nav.site ul{ display:flex; gap:2.2rem; list-style:none; margin:0; padding:0; }
 nav.site a{
   color:var(--color-text); text-decoration:none; font-size:0.85rem; font-weight:600;
@@ -531,7 +532,7 @@ img.ph{ object-fit:cover; border-radius:8px; }
 <div class="page active" id="accueil">
 
   <header class="site">
-    <div class="logo"><span style="color:var(--color-gold);">Nath</span><span style="color:var(--color-gold);">Pro</span> Conseil</div>
+    <div class="logo"><img src="assets/images/logo-bleu.png" alt="NathPro Conseil"></div>
     <button class="nav-toggle" aria-label="Ouvrir le menu" onclick="this.closest('header').classList.toggle('mobile-nav-open')"><span></span><span></span><span></span></button>
     <nav class="site"><ul>
       <li><a href="#" class="current">Accueil</a></li>
@@ -785,7 +786,7 @@ img.ph{ object-fit:cover; border-radius:8px; }
 
   <footer class="site">
     <div class="wrap">
-      <div class="logo"><span style="color:var(--color-gold);">Nath</span><span style="color:var(--color-gold);">Pro</span> Conseil</div>
+      <div class="logo"><img src="assets/images/logo-or.png" alt="NathPro Conseil"></div>
       <nav><ul>
         <li><a href="/apropos" onclick="goToPage('apropos'); return false;">Qui sommes-nous ?</a></li>
         <li><a href="/nos-expertises" onclick="goToPage('expertises'); return false;">Nos expertises</a></li>
@@ -802,7 +803,7 @@ img.ph{ object-fit:cover; border-radius:8px; }
 <div class="page" id="apropos">
 
   <header class="site">
-    <div class="logo"><span style="color:var(--color-gold);">Nath</span><span style="color:var(--color-gold);">Pro</span> Conseil</div>
+    <div class="logo"><img src="assets/images/logo-bleu.png" alt="NathPro Conseil"></div>
     <button class="nav-toggle" aria-label="Ouvrir le menu" onclick="this.closest('header').classList.toggle('mobile-nav-open')"><span></span><span></span><span></span></button>
     <nav class="site"><ul>
       <li><a href="/" onclick="goToPage('accueil'); return false;">Accueil</a></li>
@@ -890,7 +891,7 @@ img.ph{ object-fit:cover; border-radius:8px; }
 
   <footer class="site" style="margin-top:3.5rem;">
     <div class="wrap">
-      <div class="logo"><span style="color:var(--color-gold);">Nath</span><span style="color:var(--color-gold);">Pro</span> Conseil</div>
+      <div class="logo"><img src="assets/images/logo-or.png" alt="NathPro Conseil"></div>
       <nav><ul>
         <li><a href="/apropos" onclick="goToPage('apropos'); return false;">Qui sommes-nous ?</a></li>
         <li><a href="/nos-expertises" onclick="goToPage('expertises'); return false;">Nos expertises</a></li>
@@ -907,7 +908,7 @@ img.ph{ object-fit:cover; border-radius:8px; }
 <div class="page" id="expertises">
 
   <header class="site">
-    <div class="logo"><span style="color:var(--color-gold);">Nath</span><span style="color:var(--color-gold);">Pro</span> Conseil</div>
+    <div class="logo"><img src="assets/images/logo-bleu.png" alt="NathPro Conseil"></div>
     <button class="nav-toggle" aria-label="Ouvrir le menu" onclick="this.closest('header').classList.toggle('mobile-nav-open')"><span></span><span></span><span></span></button>
     <nav class="site"><ul>
       <li><a href="/" onclick="goToPage('accueil'); return false;">Accueil</a></li>
@@ -1036,7 +1037,7 @@ img.ph{ object-fit:cover; border-radius:8px; }
 
   <footer class="site" style="margin-top:3.5rem;">
     <div class="wrap">
-      <div class="logo"><span style="color:var(--color-gold);">Nath</span><span style="color:var(--color-gold);">Pro</span> Conseil</div>
+      <div class="logo"><img src="assets/images/logo-or.png" alt="NathPro Conseil"></div>
       <nav><ul>
         <li><a href="/apropos" onclick="goToPage('apropos'); return false;">Qui sommes-nous ?</a></li>
         <li><a href="/nos-expertises" onclick="goToPage('expertises'); return false;">Nos expertises</a></li>
