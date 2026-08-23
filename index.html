@@ -1178,10 +1178,14 @@ function activatePage(id){
   document.getElementById(id).classList.add('active');
 }
 
+function safeHistory(fn){
+  try { fn(); } catch(e){ /* pushState/replaceState refusé (ex: ouverture locale via file://) */ }
+}
+
 function goToPage(id, pushState){
   activatePage(id);
   window.scrollTo(0,0);
-  if(pushState !== false) history.pushState({ page: id }, '', PAGE_PATHS[id] || '/');
+  if(pushState !== false) safeHistory(() => history.pushState({ page: id }, '', PAGE_PATHS[id] || '/'));
   return false;
 }
 
@@ -1198,13 +1202,13 @@ function scrollToExpertise(id){
     window.scrollTo({ top, behavior: 'smooth' });
     requestAnimationFrame(() => { el.style.transition = ''; });
   }
-  history.replaceState(null, '', '#' + id);
+  safeHistory(() => history.replaceState(null, '', '#' + id));
   return false;
 }
 
 function goToRealisations(){
   goToPage('accueil');
-  history.replaceState({ page: 'accueil' }, '', '/#realisations');
+  safeHistory(() => history.replaceState({ page: 'accueil' }, '', '/#realisations'));
   setTimeout(() => {
     const el = document.getElementById('realisations');
     if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
