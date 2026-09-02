@@ -121,6 +121,14 @@ section{ padding:3.6rem 0; }
   padding:0.75rem 1.6rem; border-radius:999px; cursor:pointer; transition:0.2s; white-space:nowrap; text-decoration:none;
 }
 .cta-outline:hover{ border-color:var(--color-accent); color:var(--color-accent-text); }
+.cta-row{ display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+.cta-navy{
+  display:inline-block;
+  background:var(--color-navy); color:var(--color-text-inverse); border:none; font-family:var(--font-body); font-weight:700;
+  font-size:0.85rem; letter-spacing:var(--tracking-label); text-transform:uppercase;
+  padding:0.95rem 1.9rem; border-radius:999px; cursor:pointer; transition:0.2s; white-space:nowrap;
+}
+.cta-navy:hover{ background:var(--color-navy-soft); }
 
 /* ===================== PREUVES / RÉALISATIONS ===================== */
 .proof-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1.8rem; }
@@ -235,6 +243,8 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
   .lp-phone-num{ display:none; }
   .lp-phone{ padding:0.5rem 0.8rem; }
   .lp-header .logo img{ height:30px; }
+  .cta-row{ flex-direction:column; width:100%; }
+  .cta-row .cta-big, .cta-row .cta-navy{ width:100%; text-align:center; }
 }
 </style>
 </head>
@@ -253,7 +263,10 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
     <p class="eyebrow">Agencement &amp; Mobilier sur-mesure</p>
     <h1>Un chantier d'agencement mal suivi, c'est des semaines de fermeture ou de travaux à moitié faits. </h1>
     <p class="lead">Le vôtre sera cadré du premier plan à la dernière étagère.</p>
-    <button class="cta-big" onclick="openDevis()">Un projet en tête ?</button>
+    <div class="cta-row">
+      <button class="cta-navy" onclick="openDevis()">Un relooking ?</button>
+      <button class="cta-big" onclick="openDevis()">Un chantier d'agencement ?</button>
+    </div>
     <p class="lp-zone">Coordination de proximité en Auvergne · Loire · Corrèze · Creuse</p>
   </div>
 </section>
@@ -355,7 +368,7 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
         <strong>Nathalie — fondatrice de NathPro Conseil</strong>
         <div class="contact-details">
           <span>📞 <a href="tel:0661243272">06 61 24 32 72</a></span>
-          <span>✉️ <a href="mailto:nathproconseil@gmail.com">nathproconseil@gmail.com</a></span>
+          <span>✉️ <a href="mailto:Nathalie.f@nathproconseil.fr">Nathalie.f@nathproconseil.fr</a></span>
         </div>
       </div>
     </div>
@@ -382,7 +395,7 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
     <p class="muted">Contactez-nous directement, nous vous répondrons rapidement.</p>
     <div class="modal-contact">
       <div class="modal-row">📞 <a href="tel:0661243272">06 61 24 32 72</a></div>
-      <div class="modal-row">✉️ <a href="mailto:nathproconseil@gmail.com">nathproconseil@gmail.com</a></div>
+      <div class="modal-row">✉️ <a href="mailto:Nathalie.f@nathproconseil.fr">Nathalie.f@nathproconseil.fr</a></div>
     </div>
   </div>
 </div>
