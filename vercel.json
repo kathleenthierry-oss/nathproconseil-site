@@ -1,5 +1,8 @@
 {
   "rewrites": [
+    { "source": "/audit-merchandising", "destination": "/lp-audit-merchandising.html" },
+    { "source": "/agencement-mobilier", "destination": "/lp-agencement-mobilier.html" },
+    { "source": "/formation-equipes", "destination": "/lp-formation-equipes.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
