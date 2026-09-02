@@ -415,6 +415,14 @@ img.ph{ object-fit:cover; border-radius:8px; }
 .exp-icon svg{ width:22px; height:22px; stroke:var(--color-gold-text); fill:none; stroke-width:1.6; }
 .exp-section ul{ margin:0.9rem 0 0; padding-left:1.1rem; }
 .exp-section li{ font-size:0.92rem; margin-bottom:0.4rem; color:var(--color-text-muted); }
+.exp-more-link{
+  display:inline-flex; align-items:center; gap:0.4rem;
+  color:var(--color-gold-text); font-weight:700; font-size:0.88rem;
+  text-decoration:none; border-bottom:1px solid transparent; margin-top:1.1rem; transition:0.2s;
+}
+.exp-more-link:hover{ border-bottom-color:var(--color-gold-text); }
+.exp-more-link svg{ width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2; transition:transform 0.2s; }
+.exp-more-link:hover svg{ transform:translateX(3px); }
 
 
 /* --- about-unified : stats + histoire dans le même bloc --- */
@@ -991,6 +999,7 @@ img.ph{ object-fit:cover; border-radius:8px; }
             <li>Coordination complète avec les artisans</li>
             <li>Suivi de chantier jusqu'à la livraison clé en main</li>
           </ul>
+          <a class="exp-more-link" href="/agencement-mobilier">En savoir plus <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
     </div>
@@ -1009,6 +1018,7 @@ img.ph{ object-fit:cover; border-radius:8px; }
             <li>Mise en scène des nouveautés et promotions</li>
             <li>Recommandations adaptées à votre clientèle</li>
           </ul>
+          <a class="exp-more-link" href="/audit-merchandising">En savoir plus <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
     </div>
@@ -1045,6 +1055,7 @@ img.ph{ object-fit:cover; border-radius:8px; }
             <li>Coaching individuel ou collectif</li>
             <li>Suivi de la mise en pratique après la formation</li>
           </ul>
+          <a class="exp-more-link" href="/formation-equipes">En savoir plus <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
     </div>
