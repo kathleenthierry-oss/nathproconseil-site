@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agencement de pharmacie : +30 % de CA grâce au réaménagement — Blog NathPro Conseil</title>
+<meta name="description" content="Pourquoi réaménager votre officine peut faire grimper votre chiffre d'affaires de 30 % : chiffres clés, avantages et différence entre parapharmacie et médicaments.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="apple-touch-icon" href="assets/images/favicon-180.png">
+<style>
+
+/* ===================== VARIABLES (charte NathPro Conseil) ===================== */
+:root{
+  --color-navy:#10172A;
+  --color-cream:#F3EEDF;
+  --color-gold:#C9A35C;
+  --color-white:#FFFFFF;
+
+  --color-gold-text:#8A6A2F;
+  --color-gold-soft:#E4CB95;
+
+  --color-navy-soft:#1C2740;
+  --color-gray:#6B6B6B;
+  --color-gray-light:#D8D5CC;
+
+  --color-bg:var(--color-cream);
+  --color-bg-card:var(--color-white);
+
+  --color-text:var(--color-navy);
+  --color-text-inverse:var(--color-white);
+  --color-text-muted:var(--color-gray);
+
+  --color-accent:var(--color-gold);
+  --color-accent-text:var(--color-gold-text);
+
+  --color-border:var(--color-gray-light);
+
+  --font-heading:'Playfair Display', Georgia, serif;
+  --font-body:'Montserrat','Helvetica Neue',sans-serif;
+
+  --tracking-label:0.08em;
+}
+
+*{ box-sizing:border-box; }
+html{ overflow-x:hidden; }
+body{
+  margin:0;
+  background:var(--color-bg);
+  color:var(--color-text);
+  font-family:var(--font-body);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  max-width:100%;
+}
+img{ max-width:100%; display:block; }
+a{ color:var(--color-text); }
+.wrap{ max-width:760px; margin:0 auto; padding:0 4%; }
+
+h1,h2,h3{ font-family:var(--font-heading); margin:0 0 0.6rem; color:var(--color-text); }
+h2{ font-size:1.35rem; margin-top:2.4rem; }
+h3{ font-size:1.05rem; margin-top:1.6rem; }
+p{ margin:0 0 1.1rem; }
+ul{ margin:0 0 1.1rem; padding-left:1.2rem; }
+li{ margin-bottom:0.5rem; }
+.muted{ color:var(--color-text-muted); }
+
+.eyebrow{
+  display:inline-flex; align-items:center; gap:0.5rem;
+  font-size:0.72rem; font-weight:700; letter-spacing:var(--tracking-label);
+  text-transform:uppercase; color:var(--color-accent-text); margin-bottom:0.6rem;
+}
+
+/* ===================== HEADER / NAV DU SITE ===================== */
+header.site{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:1.2rem 4%;
+  background:var(--color-bg-card);
+  border-bottom:1px solid var(--color-border);
+}
+header.site .logo{ display:flex; align-items:center; }
+header.site .logo img{ height:38px; width:auto; display:block; }
+nav.site ul{ display:flex; align-items:center; gap:2rem; list-style:none; margin:0; padding:0; }
+nav.site a{
+  color:var(--color-text); text-decoration:none; font-size:0.82rem; font-weight:600;
+  letter-spacing:var(--tracking-label); text-transform:uppercase;
+  border-bottom:2px solid transparent; padding-bottom:4px; transition:0.2s; white-space:nowrap;
+}
+nav.site a:hover, nav.site a.current{ border-bottom-color:var(--color-accent); color:var(--color-accent-text); }
+.nav-toggle{
+  display:none; flex-direction:column; justify-content:center; gap:5px;
+  background:none; border:none; cursor:pointer; padding:0.4rem;
+}
+.nav-toggle span{ width:24px; height:2px; background:var(--color-text); border-radius:2px; transition:0.2s; }
+header.site.mobile-nav-open .nav-toggle span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+header.site.mobile-nav-open .nav-toggle span:nth-child(2){ opacity:0; }
+header.site.mobile-nav-open .nav-toggle span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+/* ===================== HERO / EN-TÊTE ARTICLE ===================== */
+.back-link{ display:inline-block; font-size:0.82rem; font-weight:600; color:var(--color-text-muted); text-decoration:none; margin:1.6rem 0 0; }
+.back-link:hover{ color:var(--color-accent-text); }
+.article-hero{ padding:1rem 0 1.4rem; text-align:center; }
+.article-hero h1{ font-size:1.9rem; line-height:1.3; }
+.byline{ display:flex; align-items:center; justify-content:center; gap:0.7rem; margin-top:1.2rem; }
+.byline .who{ text-align:center; font-size:0.85rem; }
+.byline .who strong{ display:block; }
+.byline .who span{ color:var(--color-text-muted); font-size:0.8rem; }
+
+.article-visual{ margin:2rem 0; }
+.article-visual img{
+  width:100%; height:320px; object-fit:cover; border-radius:14px; border:1px solid var(--color-border);
+}
+.article-visual figcaption{ text-align:center; font-size:0.82rem; color:var(--color-text-muted); margin-top:0.8rem; }
+
+.article-body p{ font-size:1rem; }
+.stat-list{ background:var(--color-bg-card); border:1px solid var(--color-border); border-radius:14px; padding:1.4rem 1.6rem 1.4rem 1.8rem; margin:0 0 1.4rem; }
+.stat-list li{ font-size:0.98rem; }
+.stat-list strong{ color:var(--color-accent-text); }
+
+.advantage{ border-top:1px solid var(--color-border); padding-top:1.2rem; margin-top:1.4rem; }
+.advantage:first-of-type{ border-top:none; padding-top:0; margin-top:0; }
+.advantage h3{ font-size:1.02rem; margin-bottom:0.3rem; }
+.advantage p{ font-size:0.95rem; color:var(--color-text-muted); margin:0; }
+
+.next-article{
+  background:var(--color-bg-card); border:1px solid var(--color-border); border-radius:14px;
+  padding:1.4rem 1.6rem; margin:2.6rem 0 1.6rem;
+}
+.next-article p.eyebrow{ margin-bottom:0.5rem; }
+.next-article a.next-link{ display:block; font-family:var(--font-heading); font-size:1.1rem; color:var(--color-text); text-decoration:none; }
+.next-article a.next-link:hover{ color:var(--color-accent-text); }
+
+.article-cta{
+  margin:1.6rem 0 1rem; background:linear-gradient(135deg, var(--color-navy), var(--color-navy-soft));
+  color:#fff; border-radius:14px; padding:1.8rem 2rem; text-align:center;
+}
+.article-cta h3{ color:#fff; font-size:1.15rem; }
+.article-cta p{ color:rgba(255,255,255,0.85); font-size:0.92rem; }
+.article-cta a.cta-big{
+  display:inline-block; margin-top:0.6rem;
+  background:var(--color-gold); color:var(--color-navy); font-weight:700;
+  font-size:0.85rem; letter-spacing:var(--tracking-label); text-transform:uppercase;
+  padding:0.9rem 1.8rem; border-radius:999px; text-decoration:none; transition:0.2s;
+}
+.article-cta a.cta-big:hover{ background:var(--color-gold-soft); }
+
+.sources{ font-size:0.76rem; color:var(--color-text-muted); margin-top:1.2rem; }
+
+footer.site{ background:var(--color-navy); color:var(--color-text-inverse); padding:2.5rem 4%; margin-top:3rem; }
+footer.site .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem; max-width:1100px; }
+footer.site .logo{ display:flex; align-items:center; }
+footer.site .logo img{ height:40px; width:auto; display:block; }
+footer.site nav ul{ display:flex; gap:1.8rem; list-style:none; padding:0; margin:0; flex-wrap:wrap; }
+footer.site nav a{ color:rgba(255,255,255,0.75); text-decoration:none; font-size:0.85rem; }
+footer.site nav a:hover{ color:var(--color-gold); }
+footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.5rem; width:100%; }
+
+@media (max-width:800px){
+  header.site{ position:relative; padding:1rem 5%; }
+  .nav-toggle{ display:flex; }
+  nav.site ul{
+    display:none; position:absolute; top:100%; right:4%; left:auto;
+    flex-direction:column; align-items:flex-start; gap:1rem; margin-top:0.6rem;
+    background:var(--color-bg-card); border:1px solid var(--color-border);
+    border-radius:10px; padding:1.2rem 1.6rem; min-width:210px;
+    box-shadow:0 12px 32px rgba(0,0,0,.18); z-index:80;
+  }
+  header.site.mobile-nav-open nav.site ul{ display:flex; }
+  .article-hero h1{ font-size:1.45rem; }
+  .article-visual img{ height:220px; }
+  .article-cta{ padding:1.6rem 1.4rem; }
+}
+@media (max-width:420px){
+  header.site .logo img{ height:30px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <a class="logo" href="https://www.nathproconseil.fr/" aria-label="NathPro Conseil"><img src="assets/images/logo-bleu.png" alt="NathPro Conseil"></a>
+  <button class="nav-toggle" aria-label="Ouvrir le menu" onclick="this.closest('header').classList.toggle('mobile-nav-open')"><span></span><span></span><span></span></button>
+  <nav class="site"><ul>
+    <li><a href="https://www.nathproconseil.fr/">Accueil</a></li>
+    <li><a href="https://www.nathproconseil.fr/apropos">Qui sommes-nous ?</a></li>
+    <li><a href="https://www.nathproconseil.fr/nos-expertises">Nos expertises</a></li>
+    <li><a href="https://www.nathproconseil.fr/#realisations">Nos réalisations</a></li>
+    <li><a href="https://www.nathproconseil.fr/blog" class="current">Blog</a></li>
+  </ul></nav>
+</header>
+
+<div class="wrap">
+  <a class="back-link" href="https://www.nathproconseil.fr/blog">← Retour au blog</a>
+
+  <section class="article-hero">
+    <p class="eyebrow" style="justify-content:center;">Merchandising &amp; agencement</p>
+    <h1>Agencement de pharmacie : pourquoi réaménager votre officine peut faire grimper votre chiffre d'affaires de 30 %</h1>
+    <div class="byline">
+      <div class="who">
+        <strong>Par NathPro Conseil</strong>
+        <span>Conseil, agencement &amp; merchandising d'officine</span>
+      </div>
+    </div>
+  </section>
+
+  <figure class="article-visual">
+    <img src="assets/images/proof-1.jpg" alt="Rayon parapharmacie et dermocosmétique dans une officine réaménagée">
+    <figcaption>Un rayon parapharmacie mis en valeur, dans une officine réaménagée par NathPro Conseil</figcaption>
+  </figure>
+
+  <div class="article-body">
+
+    <p>Vos patients entrent, attendent au comptoir, repartent avec leur ordonnance… et passent devant votre rayon parapharmacie sans même le voir ? Vous n'êtes pas seul·e. Dans beaucoup d'officines, l'espace de vente n'a pas bougé depuis dix ans, alors que les attentes des patients, elles, ont complètement changé.</p>
+    <p>Bonne nouvelle : l'agencement de votre pharmacie est l'un des leviers de croissance les plus puissants à votre disposition. Et les chiffres le prouvent.</p>
+
+    <h2>L'agencement en pharmacie, c'est quoi exactement ?</h2>
+    <p>L'agencement d'une officine, ce n'est pas simplement « refaire la déco ». C'est repenser l'ensemble de l'espace pour qu'il serve deux objectifs à la fois :</p>
+    <ul>
+      <li>le soin et le conseil, cœur de métier du pharmacien ;</li>
+      <li>la vente, notamment en parapharmacie et en produits conseil.</li>
+    </ul>
+    <p>Cela touche au parcours client, à l'emplacement des comptoirs, aux linéaires, à l'éclairage, à la signalétique, aux espaces de confidentialité… Bref, à tout ce qui fait qu'un patient se sent bien — et a envie de revenir.</p>
+
+    <h2>Ce que disent les chiffres</h2>
+    <p>Parlons concret. Selon les professionnels du secteur :</p>
+    <ul class="stat-list">
+      <li><strong>+15 %</strong> de chiffre d'affaires après le relooking d'une officine vieillissante ;</li>
+      <li><strong>+25 à 30 %</strong> de CA à 3 ans après un réaménagement complet réussi ;</li>
+      <li>jusqu'à <strong>+30 %</strong> lorsqu'un nouvel agencement accompagne un transfert près d'un pôle de santé ;</li>
+      <li><strong>+22 %</strong> de fréquentation en six mois après une simple opération de « pharma staging » (une remise en scène de l'officine à budget maîtrisé) ;</li>
+      <li><strong>+170 000 à 200 000 €</strong> de CA par an pour 100 mètres linéaires supplémentaires dans une officine de 1,7 M€.</li>
+    </ul>
+    <p>Et le tout s'amortit généralement en 3 à 5 ans. Autrement dit : un bon agencement n'est pas une dépense, c'est un investissement.</p>
+
+    <h2>Parapharmacie vs médicaments : où se fait la différence ?</h2>
+    <p>Le médicament sur ordonnance dépend des prescriptions et de prix encadrés : votre agencement ne changera pas grand-chose à ces volumes. En revanche, la parapharmacie, les produits conseil et l'OTC réagissent directement à la façon dont ils sont présentés.</p>
+    <p>Historiquement, la parapharmacie ne pèse qu'environ 9 % du CA d'une officine moyenne. C'est précisément là que se cache votre marge de progression — et c'est aussi là que les marges sont les plus intéressantes.</p>
+    <p>Un produit bien placé, à hauteur des yeux, dans une zone de passage, bien éclairé et bien expliqué… se vend. Un produit caché en bas d'une étagère au fond de l'officine, beaucoup moins.</p>
+
+    <h2>Les 7 avantages d'un nouvel aménagement d'officine</h2>
+
+    <div class="advantage">
+      <h3>1. Des ventes complémentaires qui décollent</h3>
+      <p>Un parcours pensé intelligemment guide naturellement le patient vers les univers complémentaires à son achat : solaire à côté de l'aftersun, probiotiques près des antibiotiques conseillés… Le panier moyen suit.</p>
+    </div>
+    <div class="advantage">
+      <h3>2. Une parapharmacie enfin visible</h3>
+      <p>Zones chaudes, zones froides, têtes de gondole, linéaires muraux : chaque mètre carré est optimisé pour mettre en valeur vos produits à forte valeur ajoutée.</p>
+    </div>
+    <div class="advantage">
+      <h3>3. Plus de monde qui pousse la porte</h3>
+      <p>Une vitrine attractive et un intérieur lumineux donnent envie d'entrer. Une officine modernisée attire aussi des clients qui n'avaient pas d'ordonnance.</p>
+    </div>
+    <div class="advantage">
+      <h3>4. Une expérience patient plus agréable</h3>
+      <p>Moins d'attente, des comptoirs bien répartis, un espace de confidentialité pour les échanges sensibles : le patient se sent respecté et écouté.</p>
+    </div>
+    <div class="advantage">
+      <h3>5. De la place pour vos nouveaux services</h3>
+      <p>Vaccination, dépistages, entretiens pharmaceutiques, espace orthopédie ou maman-bébé : un bon agencement vous permet de développer ces activités qui fidélisent et différencient.</p>
+    </div>
+    <div class="advantage">
+      <h3>6. Une équipe plus efficace (et moins fatiguée)</h3>
+      <p>Votre équipe passe ses journées dans l'officine. Des flux mieux organisés, c'est moins de déplacements inutiles, moins d'erreurs et plus de temps pour le conseil.</p>
+    </div>
+    <div class="advantage">
+      <h3>7. Moins de démarque</h3>
+      <p>Un espace bien conçu, avec une bonne visibilité depuis les comptoirs, dissuade naturellement le vol — sans transformer votre officine en bunker.</p>
+    </div>
+
+    <h2>Et la satisfaction client dans tout ça ?</h2>
+    <p>C'est le fil rouge de tous ces avantages. Un patient qui trouve facilement ce qu'il cherche, qui attend moins et qui se sent accueilli dans un espace agréable… revient. Et il en parle autour de lui.</p>
+    <p>La hausse de fréquentation constatée après un réaménagement (+22 % en six mois dans les officines accompagnées par un groupement) en dit long : quand l'espace change, la perception de la pharmacie change aussi.</p>
+
+    <p class="sources">Sources : Le Moniteur des pharmacies (2025, 2026), Pharmathèque, Pharma365, ConceptRenoDeco, AES Protection, Assemblée nationale.</p>
+
+  </div>
+
+  <div class="next-article">
+    <p class="eyebrow">À lire ensuite</p>
+    <a class="next-link" href="https://www.nathproconseil.fr/blog/reamenager-pharmacie-guide-pratique">Réaménager sa pharmacie : le guide pratique en 4 étapes (+ FAQ) →</a>
+  </div>
+
+  <div class="article-cta">
+    <h3>Prêt·e à transformer votre officine ?</h3>
+    <p>NathPro Conseil vous accompagne dans l'agencement et le merchandising de votre officine : diagnostic de votre espace, parcours client, mise en valeur de la parapharmacie et formation de vos équipes.</p>
+    <a class="cta-big" href="tel:0661243272">Appeler le 06 61 24 32 72</a>
+  </div>
+
+  <a class="back-link" href="https://www.nathproconseil.fr/blog">← Retour au blog</a>
+</div>
+
+<footer class="site">
+  <div class="wrap" style="max-width:1100px;">
+    <div class="logo"><img src="assets/images/logo-or.png" alt="NathPro Conseil"></div>
+    <nav><ul>
+      <li><a href="https://www.nathproconseil.fr/apropos">Qui sommes-nous ?</a></li>
+      <li><a href="https://www.nathproconseil.fr/nos-expertises">Nos expertises</a></li>
+      <li><a href="https://www.nathproconseil.fr/#realisations">Nos réalisations</a></li>
+      <li><a href="https://www.nathproconseil.fr/blog">Blog</a></li>
+      <li><a href="https://www.nathproconseil.fr/mentions-legales.html">Mentions légales</a></li>
+    </ul></nav>
+    <div class="copy">© 2026 NathPro Conseil — Tous droits réservés</div>
+  </div>
+</footer>
+
+</body>
+</html>

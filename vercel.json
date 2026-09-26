@@ -7,6 +7,8 @@
     { "source": "/mentions-legales", "destination": "/mentions-legales.html" },
     { "source": "/blog", "destination": "/blog.html" },
     { "source": "/blog/histoire-de-nathalie", "destination": "/blog-histoire-nathalie.html" },
+    { "source": "/blog/agencement-pharmacie-chiffre-affaires", "destination": "/blog-agencement-pharmacie.html" },
+    { "source": "/blog/reamenager-pharmacie-guide-pratique", "destination": "/blog-guide-reamenagement.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
