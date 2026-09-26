@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Audit &amp; Réimplantation Merchandising — NathPro Conseil</title>
-<meta name="description" content="Diagnostic merchandising sur site et réimplantation physique de vos rayons de parapharmacie, par une experte de 30 ans de terrain pharmaceutique.">
+<title>Bureaux assis-debout LINAK — NathPro Conseil</title>
+<meta name="description" content="Distributeur exclusif des bureaux assis-debout électriques LINAK en Auvergne : diagnostic de poste, installation et réglage ergonomique pour pharmacies, opticiens et bureaux d'entreprise.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -43,7 +43,7 @@
 
   --tracking-label:0.08em;
 
-  /* accent secondaire propre à cette page (audit / merchandising) */
+  /* accent secondaire propre à cette page (bureaux ergonomiques / LINAK) */
   --page-accent-bg: rgba(201,163,92,0.14);
 }
 
@@ -93,17 +93,29 @@ section{ padding:3.6rem 0; }
 .lp-phone:hover{ border-color:var(--color-accent); color:var(--color-accent-text); }
 
 /* ===================== HERO ===================== */
-.lp-hero{ padding:4.5rem 0 3.2rem; text-align:center; }
+.lp-hero{ padding:4.5rem 0 2.4rem; text-align:center; }
 .lp-hero .wrap{ max-width:760px; }
 .lp-hero .eyebrow{ justify-content:center; }
-.lp-hero h1{ font-size:2.5rem; line-height:1.25; }
+.lp-hero h1{ font-size:2.4rem; line-height:1.25; }
 .lp-hero p.lead{
   font-family:var(--font-body); font-weight:500; font-style:normal; font-size:1.15rem;
-  color:var(--color-text); line-height:1.65; max-width:600px; margin:1.1rem auto 1.8rem;
+  color:var(--color-text); line-height:1.65; max-width:620px; margin:1.1rem auto 1.8rem;
 }
 .lp-zone{
   margin-top:1.4rem; font-size:0.75rem; letter-spacing:var(--tracking-label);
   text-transform:uppercase; color:var(--color-text-muted);
+}
+
+/* ===================== VISUEL HERO ===================== */
+.hero-visual{
+  max-width:1000px; margin:2.6rem auto 0; padding:0 4%;
+}
+.hero-visual figure{ margin:0; }
+.hero-visual img{
+  width:100%; height:340px; object-fit:cover; border-radius:14px; border:1px solid var(--color-border);
+}
+.hero-visual figcaption{
+  text-align:center; font-size:0.82rem; color:var(--color-text-muted); margin-top:0.8rem;
 }
 
 /* ===================== BOUTONS ===================== */
@@ -121,10 +133,6 @@ section{ padding:3.6rem 0; }
   padding:0.75rem 1.6rem; border-radius:999px; cursor:pointer; transition:0.2s; white-space:nowrap; text-decoration:none;
 }
 .cta-outline:hover{ border-color:var(--color-accent); color:var(--color-accent-text); }
-
-/* ===================== PREUVES / RÉALISATIONS ===================== */
-.proof-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1.8rem; }
-.proof-grid img{ width:100%; height:180px; object-fit:cover; border-radius:10px; border:1px solid var(--color-border); }
 
 /* ===================== MODALE CONTACT ===================== */
 .modal-overlay{ display:none; position:fixed; inset:0; background:rgba(16,23,42,0.62); z-index:300; align-items:center; justify-content:center; padding:1rem; }
@@ -150,7 +158,15 @@ section{ padding:3.6rem 0; }
   display:flex; align-items:center; justify-content:center; margin-bottom:1rem;
 }
 .feature-card .icon-circle svg{ width:22px; height:22px; stroke:var(--color-gold-text); fill:none; stroke-width:1.8; }
+.feature-card h3{ font-size:1.02rem; }
 .feature-card p{ font-size:0.9rem; color:var(--color-text-muted); margin:0; }
+
+/* ===================== SOLUTION (image + liste) ===================== */
+.solution-row{ display:grid; grid-template-columns:1fr 1fr; gap:2.4rem; align-items:center; margin-top:1.8rem; }
+.solution-row img{ border-radius:12px; border:1px solid var(--color-border); height:320px; object-fit:cover; }
+.solution-row ul{ margin:0; padding-left:1.15rem; }
+.solution-row li{ margin-bottom:0.7rem; font-size:0.95rem; }
+.solution-row li strong{ color:var(--color-text); }
 
 /* ===================== ÉTAPES NUMÉROTÉES ===================== */
 .steps-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; margin-top:1.8rem; counter-reset:step; }
@@ -164,12 +180,13 @@ section{ padding:3.6rem 0; }
   display:block; margin-bottom:0.5rem;
 }
 .step-card p{ font-size:0.88rem; color:var(--color-text-muted); margin:0; }
-.tag{
-  display:inline-flex; align-items:center; gap:0.35rem;
-  background:var(--page-accent-bg); color:var(--color-gold-text);
-  border-radius:999px; padding:0.28rem 0.75rem; font-size:0.68rem; font-weight:700;
-  letter-spacing:var(--tracking-label); text-transform:uppercase; margin-left:0.5rem; vertical-align:middle;
-}
+
+/* ===================== FAQ ===================== */
+.faq-list{ max-width:760px; margin:1.8rem auto 0; }
+.faq-item{ border-bottom:1px solid var(--color-border); padding:1.2rem 0; }
+.faq-item:first-child{ padding-top:0; }
+.faq-item h3{ font-size:1rem; margin-bottom:0.4rem; }
+.faq-item p{ font-size:0.9rem; color:var(--color-text-muted); margin:0; }
 
 /* ===================== SECTION FINALE / CONTACT ===================== */
 .lp-final{ background:var(--color-bg); }
@@ -211,7 +228,10 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
   .lp-hero h1{ font-size:1.9rem; }
   .cta-big{ white-space:normal; text-align:center; }
   .lp-hero p.lead{ font-size:1.05rem; }
-  .feature-grid, .steps-3, .proof-grid{ grid-template-columns:1fr; }
+  .feature-grid, .steps-3{ grid-template-columns:1fr; }
+  .solution-row{ grid-template-columns:1fr; }
+  .solution-row img{ height:220px; order:-1; }
+  .hero-visual img{ height:220px; }
   .lp-header-right{ gap:0.7rem; }
   .lp-header-link{ display:none; }
   .cta-banner{ flex-direction:column; align-items:flex-start; }
@@ -236,39 +256,91 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
 
 <section class="lp-hero">
   <div class="wrap">
-    <p class="eyebrow">Audit &amp; Réimplantation Merchandising</p>
-    <h1>Votre rayon perd des ventes tous les jours. L'audit les retrouve.</h1>
-    <p class="lead">18 ans d'expérience en officine. J'analyse vos flux, je repense vos univers, et je fais moi-même la mise en place physique.</p>
-    <button class="cta-big" onclick="openDevis()">Demander un audit sur site</button>
-    <p class="lp-zone">+250 officines accompagnées</p>
+    <p class="eyebrow">Bureaux assis-debout LINAK</p>
+    <h1>Rester statique 8h par jour abîme durablement le dos de vos équipes.</h1>
+    <p class="lead">Distributeur exclusif des bureaux électriques LINAK en Auvergne, je configure, installe et règle des postes assis-debout pensés pour les officines, les cabinets d'optique et les bureaux d'entreprise.</p>
+    <button class="cta-big" onclick="openDevis()">Demander mon étude de poste</button>
+    <p class="lp-zone">Installation &amp; réglage sur site en Auvergne · Garantie constructeur 10 ans</p>
+  </div>
+  <div class="hero-visual">
+    <figure>
+      <img src="assets/images/bureau-ergonomique.jpg" alt="Postes de travail assis-debout électriques Linak, installés dans un espace de bureau">
+      <figcaption>Montée / descente électrique fluide et silencieuse — adaptée au bureau comme au comptoir</figcaption>
+    </figure>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <p class="eyebrow" style="text-align:center;">Votre profil</p>
-    <h2>L'expertise du terrain</h2>
+    <p class="eyebrow" style="text-align:center;">Le constat</p>
+    <h2>Un poste statique se paie tôt ou tard</h2>
     <div class="feature-grid">
       <div class="feature-card">
         <div class="icon-circle">
-          <svg viewBox="0 0 24 24"><path d="M3 20h18"/><rect x="5" y="11" width="3" height="9"/><rect x="10.5" y="7" width="3" height="13"/><rect x="16" y="14" width="3" height="6"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 3v6"/><circle cx="12" cy="12" r="9"/><path d="M12 12l3 3"/></svg>
         </div>
-        <h3>30 ans d'expérience pharmaceutique</h3>
-        <p>Dont 18 ans comme formatrice et responsable merchandising pour un grand laboratoire. Une connaissance fine de la rotation des produits, des exigences des marques et de la psychologie d'achat au comptoir.</p>
+        <h3>Des TMS qui s'installent</h3>
+        <p>Rester assis ou debout plus de 4h sans bouger favorise les troubles musculo-squelettiques, première cause de maladie professionnelle reconnue en France.</p>
       </div>
       <div class="feature-card">
         <div class="icon-circle">
-          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
         </div>
-        <h3>Formation en Design d'Espace</h3>
-        <p>La compétence pour créer des univers visuels harmonieux, clairs et attractifs, qui guident naturellement le regard et le geste d'achat.</p>
+        <h3>Une vigilance qui baisse</h3>
+        <p>Jambes lourdes, tensions dans le dos, fatigue en fin de journée : le corps réclame du mouvement, et la concentration en pâtit.</p>
       </div>
       <div class="feature-card">
         <div class="icon-circle">
-          <svg viewBox="0 0 24 24"><path d="M14 3l7 7-8 8-7-7z"/><path d="M9 15l-5 5"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h11"/></svg>
         </div>
-        <h3>Une vraie prestation opérationnelle</h3>
-        <p>Pas de simples rapports théoriques : un déplacement en officine pour vider, réorganiser, sectoriser et implanter physiquement les produits de parapharmacie et de libre-service.</p>
+        <h3>Une prévention suivie de près</h3>
+        <p>La CARSAT recommande l'alternance assis-debout sur les postes à forte répétitivité ou station prolongée — un vrai sujet sur les postes de préparation ou de comptoir.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--color-bg-card); border-top:1px solid var(--color-border); border-bottom:1px solid var(--color-border);">
+  <div class="wrap">
+    <p class="eyebrow" style="text-align:center;">La solution</p>
+    <h2>Des bureaux électriques LINAK, référence mondiale du secteur</h2>
+    <div class="solution-row">
+      <img src="assets/images/bureau-ergonomique.jpg" alt="Bureau assis-debout électrique Linak en position debout">
+      <ul>
+        <li><strong>Levée électrique fluide et silencieuse</strong> — plus besoin de manivelle ni d'effort pour changer de position.</li>
+        <li><strong>Réglage en quelques secondes</strong>, avec mémorisation de plusieurs hauteurs par utilisateur.</li>
+        <li><strong>Structure robuste</strong>, testée et garantie 10 ans par le fabricant.</li>
+        <li><strong>Adapté à chaque usage</strong> : comptoir, back-office, poste de préparation ou télétravail.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow" style="text-align:center;">Pour qui</p>
+    <h2>Des postes pensés pour votre métier</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+        </div>
+        <h3>Pharmacies &amp; PDA</h3>
+        <p>Sur les postes de préparation des doses, la répétitivité du geste est forte : alterner assis-debout limite la fatigue du poignet et du dos sur la durée.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/></svg>
+        </div>
+        <h3>Opticiens &amp; instituts</h3>
+        <p>Montage, ajustage, conseil au comptoir : des gestes fins qui demandent une posture stable, sans crisper les épaules ni le bas du dos.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+        </div>
+        <h3>Bureaux &amp; télétravail</h3>
+        <p>Poste administratif classique ou espace de télétravail : le même confort, pour limiter la sédentarité au quotidien.</p>
       </div>
     </div>
   </div>
@@ -277,19 +349,19 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
 <section style="background:var(--color-bg-card); border-top:1px solid var(--color-border); border-bottom:1px solid var(--color-border);">
   <div class="wrap">
     <p class="eyebrow" style="text-align:center;">La méthode</p>
-    <h2>Les étapes de la prestation merchandising</h2>
+    <h2>Du diagnostic au poste réglé, en toute simplicité</h2>
     <div class="steps-3">
       <div class="step-card">
-        <h3>L'Audit des Flux et Chiffres</h3>
-        <p>Analyse fine du parcours client pour identifier les zones froides à dynamiser et optimiser la marge brute au m².</p>
+        <h3>Le diagnostic du poste</h3>
+        <p>Un point sur site (ou à distance) pour identifier les contraintes réelles de vos équipes et les priorités d'aménagement.</p>
       </div>
       <div class="step-card">
-        <h3>La Stratégie d'Assortiment</h3>
-        <p>Sélection et sectorisation des gammes (Bébé, Naturel, Cosmétique) selon leur rentabilité potentielle.</p>
+        <h3>La configuration LINAK</h3>
+        <p>Choix du plateau, du piètement et des accessoires adaptés à votre activité, avec un chiffrage clair et sans surprise.</p>
       </div>
       <div class="step-card">
-        <h3>La Réimplantation Physique <span class="tag">Sur devis</span></h3>
-        <p>Travail de terrain réalisé personnellement — mise en avant des produits à forte marge, hauteurs d'yeux, théâtralisation. Pour rendre les rayons immédiatement performants.</p>
+        <h3>Installation &amp; réglages</h3>
+        <p>Montage sur site, réglage des hauteurs et des mémoires, et quelques conseils simples pour que l'équipe adopte vraiment le mouvement.</p>
       </div>
     </div>
   </div>
@@ -297,15 +369,25 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
 
 <section>
   <div class="wrap">
-    <p class="eyebrow" style="text-align:center;">Exemples de réalisations</p>
-    <h2>Quelques officines déjà transformées</h2>
-    <div class="proof-grid">
-      <img src="assets/images/proof-1.jpg" alt="Réalisation merchandising en pharmacie">
-      <img src="assets/images/proof-2.jpg" alt="Réalisation merchandising en pharmacie">
-      <img src="assets/images/proof-3.jpg" alt="Réalisation merchandising en pharmacie">
-    </div>
-    <div style="text-align:center; margin-top:1.8rem;">
-      <a class="cta-outline" href="https://www.nathproconseil.fr/#realisations">Voir toutes nos réalisations</a>
+    <p class="eyebrow" style="text-align:center;">Questions fréquentes</p>
+    <h2>Ce qu'on nous demande le plus souvent</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>Le bureau est-il livré et installé ?</h3>
+        <p>Oui. Je me déplace pour l'installation, le réglage des hauteurs et la mise en main de votre équipe.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Est-ce adapté au télétravail ?</h3>
+        <p>Tout à fait, les mêmes bureaux électriques s'installent aussi bien en entreprise qu'à domicile.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Quelle garantie sur le matériel ?</h3>
+        <p>Les moteurs et la structure sont garantis 10 ans par LINAK, référence mondiale des systèmes de levage électriques.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Combien de temps pour recevoir un devis ?</h3>
+        <p>Sous 48h ouvrées après notre échange, avec un chiffrage adapté au nombre de postes et à votre configuration.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -314,10 +396,10 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
   <div class="wrap">
     <div class="cta-banner">
       <div>
-        <strong>Prêt à dynamiser vos rayons ?</strong>
-        <span>Un diagnostic sur site pour identifier vos leviers de marge immédiats.</span>
+        <strong>Un projet en tête ?</strong>
+        <span>Échangeons-en ensemble, sans engagement.</span>
       </div>
-      <button class="cta-big" onclick="openDevis()">Demander mon diagnostic merchandising sur site</button>
+      <button class="cta-big" onclick="openDevis()">Demander un devis</button>
     </div>
     <div class="contact-strip">
       <img class="contact-photo-sm" src="assets/images/nathalie-contact.jpg" alt="Nathalie, fondatrice de NathPro Conseil">
@@ -349,7 +431,7 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
 <div class="modal-overlay" id="devisModal" onclick="closeDevis()">
   <div class="modal-box" onclick="event.stopPropagation()">
     <button class="modal-close" onclick="closeDevis()">✕</button>
-    <h3>Demander mon diagnostic merchandising</h3>
+    <h3>Demander mon étude de poste assis-debout</h3>
     <p class="muted">Contactez-nous directement, nous vous répondrons rapidement.</p>
     <div class="modal-contact">
       <div class="modal-row">📞 <a href="tel:0661243272">06 61 24 32 72</a></div>
