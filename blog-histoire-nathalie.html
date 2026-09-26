@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon histoire : du laboratoire à l'agencement — Blog NathPro Conseil</title>
+<meta name="description" content="Nathalie Fernandes raconte son parcours : 30 ans entre laboratoire pharmaceutique, terrain commercial et reconversion vers l'agencement d'officine.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="apple-touch-icon" href="assets/images/favicon-180.png">
+<style>
+
+/* ===================== VARIABLES (charte NathPro Conseil) ===================== */
+:root{
+  --color-navy:#10172A;
+  --color-cream:#F3EEDF;
+  --color-gold:#C9A35C;
+  --color-white:#FFFFFF;
+
+  --color-gold-text:#8A6A2F;
+  --color-gold-soft:#E4CB95;
+
+  --color-navy-soft:#1C2740;
+  --color-gray:#6B6B6B;
+  --color-gray-light:#D8D5CC;
+
+  --color-bg:var(--color-cream);
+  --color-bg-card:var(--color-white);
+
+  --color-text:var(--color-navy);
+  --color-text-inverse:var(--color-white);
+  --color-text-muted:var(--color-gray);
+
+  --color-accent:var(--color-gold);
+  --color-accent-text:var(--color-gold-text);
+
+  --color-border:var(--color-gray-light);
+
+  --font-heading:'Playfair Display', Georgia, serif;
+  --font-body:'Montserrat','Helvetica Neue',sans-serif;
+
+  --tracking-label:0.08em;
+}
+
+*{ box-sizing:border-box; }
+html{ overflow-x:hidden; }
+body{
+  margin:0;
+  background:var(--color-bg);
+  color:var(--color-text);
+  font-family:var(--font-body);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  max-width:100%;
+}
+img{ max-width:100%; display:block; }
+a{ color:var(--color-text); }
+.wrap{ max-width:760px; margin:0 auto; padding:0 4%; }
+
+h1,h2,h3{ font-family:var(--font-heading); margin:0 0 0.6rem; color:var(--color-text); }
+h2{ font-size:1.35rem; margin-top:2.4rem; }
+p{ margin:0 0 1.1rem; }
+.muted{ color:var(--color-text-muted); }
+
+.eyebrow{
+  display:inline-flex; align-items:center; gap:0.5rem;
+  font-size:0.72rem; font-weight:700; letter-spacing:var(--tracking-label);
+  text-transform:uppercase; color:var(--color-accent-text); margin-bottom:0.6rem;
+}
+
+/* ===================== HEADER / NAV DU SITE ===================== */
+header.site{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:1.2rem 4%;
+  background:var(--color-bg-card);
+  border-bottom:1px solid var(--color-border);
+}
+header.site .logo{ display:flex; align-items:center; }
+header.site .logo img{ height:38px; width:auto; display:block; }
+nav.site ul{ display:flex; align-items:center; gap:2rem; list-style:none; margin:0; padding:0; }
+nav.site a{
+  color:var(--color-text); text-decoration:none; font-size:0.82rem; font-weight:600;
+  letter-spacing:var(--tracking-label); text-transform:uppercase;
+  border-bottom:2px solid transparent; padding-bottom:4px; transition:0.2s; white-space:nowrap;
+}
+nav.site a:hover, nav.site a.current{ border-bottom-color:var(--color-accent); color:var(--color-accent-text); }
+.nav-toggle{
+  display:none; flex-direction:column; justify-content:center; gap:5px;
+  background:none; border:none; cursor:pointer; padding:0.4rem;
+}
+.nav-toggle span{ width:24px; height:2px; background:var(--color-text); border-radius:2px; transition:0.2s; }
+header.site.mobile-nav-open .nav-toggle span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+header.site.mobile-nav-open .nav-toggle span:nth-child(2){ opacity:0; }
+header.site.mobile-nav-open .nav-toggle span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+/* ===================== HERO / EN-TÊTE ARTICLE ===================== */
+.back-link{ display:inline-block; font-size:0.82rem; font-weight:600; color:var(--color-text-muted); text-decoration:none; margin:1.6rem 0 0; }
+.back-link:hover{ color:var(--color-accent-text); }
+.article-hero{ padding:1rem 0 1.4rem; text-align:center; }
+.article-hero h1{ font-size:2rem; line-height:1.3; }
+.byline{ display:flex; align-items:center; justify-content:center; gap:0.7rem; margin-top:1.2rem; }
+.byline img{ width:44px; height:44px; border-radius:50%; object-fit:cover; }
+.byline .who{ text-align:left; font-size:0.85rem; }
+.byline .who strong{ display:block; }
+.byline .who span{ color:var(--color-text-muted); font-size:0.8rem; }
+
+.article-photo{ margin:2rem 0; text-align:center; }
+.article-photo img{
+  width:220px; height:220px; object-fit:cover; border-radius:50%;
+  margin:0 auto; border:4px solid var(--color-bg-card); box-shadow:0 12px 32px rgba(16,23,42,0.12);
+}
+.article-photo figcaption{ margin-top:0.9rem; font-size:0.85rem; color:var(--color-text-muted); font-style:italic; }
+
+.article-body p{ font-size:1rem; }
+
+.article-cta{
+  margin:3rem 0 1rem; background:linear-gradient(135deg, var(--color-navy), var(--color-navy-soft));
+  color:#fff; border-radius:14px; padding:1.8rem 2rem; text-align:center;
+}
+.article-cta h3{ color:#fff; font-size:1.15rem; }
+.article-cta p{ color:rgba(255,255,255,0.85); font-size:0.92rem; }
+.article-cta a.cta-big{
+  display:inline-block; margin-top:0.6rem;
+  background:var(--color-gold); color:var(--color-navy); font-weight:700;
+  font-size:0.85rem; letter-spacing:var(--tracking-label); text-transform:uppercase;
+  padding:0.9rem 1.8rem; border-radius:999px; text-decoration:none; transition:0.2s;
+}
+.article-cta a.cta-big:hover{ background:var(--color-gold-soft); }
+
+footer.site{ background:var(--color-navy); color:var(--color-text-inverse); padding:2.5rem 4%; margin-top:3rem; }
+footer.site .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem; max-width:1100px; }
+footer.site .logo{ display:flex; align-items:center; }
+footer.site .logo img{ height:40px; width:auto; display:block; }
+footer.site nav ul{ display:flex; gap:1.8rem; list-style:none; padding:0; margin:0; flex-wrap:wrap; }
+footer.site nav a{ color:rgba(255,255,255,0.75); text-decoration:none; font-size:0.85rem; }
+footer.site nav a:hover{ color:var(--color-gold); }
+footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.5rem; width:100%; }
+
+@media (max-width:800px){
+  header.site{ position:relative; padding:1rem 5%; }
+  .nav-toggle{ display:flex; }
+  nav.site ul{
+    display:none; position:absolute; top:100%; right:4%; left:auto;
+    flex-direction:column; align-items:flex-start; gap:1rem; margin-top:0.6rem;
+    background:var(--color-bg-card); border:1px solid var(--color-border);
+    border-radius:10px; padding:1.2rem 1.6rem; min-width:210px;
+    box-shadow:0 12px 32px rgba(0,0,0,.18); z-index:80;
+  }
+  header.site.mobile-nav-open nav.site ul{ display:flex; }
+  .article-hero h1{ font-size:1.5rem; }
+  .article-cta{ padding:1.6rem 1.4rem; }
+}
+@media (max-width:420px){
+  header.site .logo img{ height:30px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <a class="logo" href="https://www.nathproconseil.fr/" aria-label="NathPro Conseil"><img src="assets/images/logo-bleu.png" alt="NathPro Conseil"></a>
+  <button class="nav-toggle" aria-label="Ouvrir le menu" onclick="this.closest('header').classList.toggle('mobile-nav-open')"><span></span><span></span><span></span></button>
+  <nav class="site"><ul>
+    <li><a href="https://www.nathproconseil.fr/">Accueil</a></li>
+    <li><a href="https://www.nathproconseil.fr/apropos">Qui sommes-nous ?</a></li>
+    <li><a href="https://www.nathproconseil.fr/nos-expertises">Nos expertises</a></li>
+    <li><a href="https://www.nathproconseil.fr/#realisations">Nos réalisations</a></li>
+    <li><a href="https://www.nathproconseil.fr/blog" class="current">Blog</a></li>
+  </ul></nav>
+</header>
+
+<div class="wrap">
+  <a class="back-link" href="https://www.nathproconseil.fr/blog">← Retour au blog</a>
+
+  <section class="article-hero">
+    <p class="eyebrow" style="justify-content:center;">Portrait</p>
+    <h1>Du laboratoire à l'agencement : mon histoire, une reconversion assumée</h1>
+    <div class="byline">
+      <div class="who" style="text-align:center;">
+        <strong>Par Nathalie Fernandes</strong>
+        <span>Fondatrice de NathPro Conseil</span>
+      </div>
+    </div>
+  </section>
+
+  <figure class="article-photo">
+    <img src="assets/images/nathalie-contact.jpg" alt="Nathalie Fernandes, fondatrice de NathPro Conseil">
+    <figcaption>Nathalie Fernandes, fondatrice de NathPro Conseil</figcaption>
+  </figure>
+
+  <div class="article-body">
+
+    <h2>Le laboratoire, une école de rigueur</h2>
+    <p>Tout a commencé il y a 30 ans, quand j'ai intégré un laboratoire de recherche et développement à mes 18 ans. C'est là que j'ai appris la rigueur, la précision, et surtout à comprendre en profondeur le monde pharmaceutique, un univers que j'ai ensuite approfondi en fabrication pharmaceutique et homéopathique, tout en découvrant les réseaux de grossistes en travaillant en leur sein.</p>
+
+    <h2>Le virage commercial et le terrain</h2>
+    <p>Mais j'avais soif d'autre chose : le contact, la négociation, le terrain. Une formation de délégué pharmaceutique m'a ouvert les portes du commercial, d'abord sur Paris intra-muros, où le laboratoire pour lequel je travaillais commercialisait des sandales à semelles en bois censées relancer la circulation sanguine. J'ai eu l'idée de les proposer dans les pharmacies situées à proximité des hôpitaux, en les mettant en avant dès l'entrée avec des piles de boîtes bien visibles. Le résultat a dépassé les attentes : ces pharmacies en ont vendu par centaines auprès du personnel hospitalier.</p>
+    <p>J'ai ensuite intégré le laboratoire Expanscience en tant que déléguée développement, formation et merchandising. Je me souviens de mes débuts, lorsque le laboratoire me demandait d'imposer un plan merchandising plaçant notre gamme Best of les lingettes sur la dernière étagère, tout en bas. Les commerciaux avec qui je travaillais s'inquiétaient de cet emplacement peu valorisant. J'ai alors réfléchi à une façon de faire fonctionner l'ensemble des produits malgré cette contrainte : j'ai construit un plan merchandising autour de la lingette Best of, positionnée verticalement, en disposant de chaque côté les quatre gammes correspondant aux quatre types de peau. Résultat, la lingette attirait le client, qui découvrait ensuite naturellement les différentes gammes adaptées à son type de peau. Les ventes ont grimpé en flèche.</p>
+
+    <h2>La naissance d'une passion pour l'agencement</h2>
+    <p>Au-delà du terrain en officine, j'animais aussi des staffs en milieu hospitalier et j'organisais de nombreuses soirées événementielles de formation. C'est aussi là qu'est née ma passion pour l'agencement d'officine. Je me souviens d'un pharmacien qui avait un réel besoin de moderniser son espace de vente, mais sans budget pour de grands travaux. Je lui ai proposé d'installer de simples étagères blanches et je l'ai accompagné dans le réagencement complet de sa pharmacie. Le résultat : une exposition produits repensée, un espace modernisé, et des ventes en hausse. Il en était ravi, et moi aussi.</p>
+
+    <h2>Une reconversion assumée</h2>
+    <p>Après plusieurs années riches en expériences terrain, l'envie de me réinventer s'est imposée. Je me suis formée en décoration et design d'espace, puis j'ai suivi tout un parcours à la CCI : management, efficacité relationnelle, pilotage de données, gestion d'entreprise. J'ai aussi obtenu mon certificat de formatrice en entreprise.</p>
+    <p>Le déclic est venu d'un stage d'immersion de deux mois chez des agenceurs spécialisés dans les pharmacies, les métiers de bouche et les opticiens, qui fabriquent eux-mêmes leur mobilier. C'est là que tout s'est assemblé : mon expérience terrain, ma connaissance intime du secteur pharmaceutique, et cette nouvelle expertise en design.</p>
+    <p>J'ai décidé de créer ma société pour travailler en partenariat avec eux : ils apportent leur savoir-faire de fabricants, j'apporte mon réseau, mon expérience du secteur et je pilote la prospection commerciale.</p>
+
+    <h2>Aujourd'hui</h2>
+    <p>Aujourd'hui, mon fil conducteur, c'est l'ergonomie : plans de travail pensés pour le geste juste, bureaux ergonomiques électriques, espaces qui s'adaptent à ceux qui y travaillent chaque jour, pas l'inverse.</p>
+
+  </div>
+
+  <div class="article-cta">
+    <h3>Un projet en tête ?</h3>
+    <p>Échangeons-en ensemble, sans engagement.</p>
+    <a class="cta-big" href="tel:0661243272">Appeler le 06 61 24 32 72</a>
+  </div>
+
+  <a class="back-link" href="https://www.nathproconseil.fr/blog">← Retour au blog</a>
+</div>
+
+<footer class="site">
+  <div class="wrap" style="max-width:1100px;">
+    <div class="logo"><img src="assets/images/logo-or.png" alt="NathPro Conseil"></div>
+    <nav><ul>
+      <li><a href="https://www.nathproconseil.fr/apropos">Qui sommes-nous ?</a></li>
+      <li><a href="https://www.nathproconseil.fr/nos-expertises">Nos expertises</a></li>
+      <li><a href="https://www.nathproconseil.fr/#realisations">Nos réalisations</a></li>
+      <li><a href="https://www.nathproconseil.fr/blog">Blog</a></li>
+      <li><a href="https://www.nathproconseil.fr/mentions-legales.html">Mentions légales</a></li>
+    </ul></nav>
+    <div class="copy">© 2026 NathPro Conseil — Tous droits réservés</div>
+  </div>
+</footer>
+
+</body>
+</html>

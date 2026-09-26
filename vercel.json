@@ -5,6 +5,8 @@
     { "source": "/formation-equipes", "destination": "/lp-formation-equipes.html" },
     { "source": "/bureaux-ergonomiques", "destination": "/lp-bureaux-ergonomiques.html" },
     { "source": "/mentions-legales", "destination": "/mentions-legales.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/blog/histoire-de-nathalie", "destination": "/blog-histoire-nathalie.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
