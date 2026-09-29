@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formation des Équipes Officinales — NathPro Conseil</title>
-<meta name="description" content="Formation sur-mesure au conseil associé éthique pour vos adjoints et préparateurs, par une experte certifiée CCE aux 30 ans de terrain.">
+<title>Bureaux sur mesure — entreprises & pharmacies — NathPro Conseil</title>
+<meta name="description" content="Des postes de travail ergonomiques et motorisés, pensés pour chaque métier : bureaux d'entreprise lumineux et épurés, ou postes techniques pour laboratoire et arrière-boutique de pharmacie.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -43,7 +43,6 @@
 
   --tracking-label:0.08em;
 
-  /* accent secondaire propre à cette page (formation) : mise en avant du gold-text, comme les stats du site */
   --page-accent-bg: rgba(201,163,92,0.14);
 }
 
@@ -105,13 +104,17 @@ header.site.mobile-nav-open .nav-toggle span:nth-child(2){ opacity:0; }
 header.site.mobile-nav-open .nav-toggle span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
 
 /* ===================== HERO ===================== */
-.lp-hero{ padding:4.5rem 0 3.2rem; text-align:center; }
+.lp-hero{ padding:4.5rem 0 2.4rem; text-align:center; }
 .lp-hero .wrap{ max-width:760px; }
 .lp-hero .eyebrow{ justify-content:center; }
-.lp-hero h1{ font-size:2.5rem; line-height:1.25; }
+.lp-hero h1{ font-size:2.4rem; line-height:1.25; }
+.lp-hero p.hero-subtitle{
+  font-family:var(--font-heading); font-style:italic; color:var(--color-accent-text);
+  font-size:1.3rem; margin:0.5rem auto 0; max-width:600px;
+}
 .lp-hero p.lead{
   font-family:var(--font-body); font-weight:500; font-style:normal; font-size:1.15rem;
-  color:var(--color-text); line-height:1.65; max-width:600px; margin:1.1rem auto 1.8rem;
+  color:var(--color-text); line-height:1.65; max-width:620px; margin:1.1rem auto 1.8rem;
 }
 .lp-zone{
   margin-top:1.4rem; font-size:0.75rem; letter-spacing:var(--tracking-label);
@@ -127,16 +130,6 @@ header.site.mobile-nav-open .nav-toggle span:nth-child(3){ transform:translateY(
   text-decoration:none;
 }
 .cta-big:hover{ background:var(--color-gold-soft); }
-.cta-outline{
-  display:inline-block; background:transparent; color:var(--color-text); border:1px solid var(--color-border);
-  font-family:var(--font-body); font-weight:700; font-size:0.8rem; letter-spacing:var(--tracking-label); text-transform:uppercase;
-  padding:0.75rem 1.6rem; border-radius:999px; cursor:pointer; transition:0.2s; white-space:nowrap; text-decoration:none;
-}
-.cta-outline:hover{ border-color:var(--color-accent); color:var(--color-accent-text); }
-
-/* ===================== PREUVES / RÉALISATIONS ===================== */
-.proof-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1.8rem; }
-.proof-grid img{ width:100%; height:180px; object-fit:cover; border-radius:10px; border:1px solid var(--color-border); }
 
 /* ===================== MODALE CONTACT ===================== */
 .modal-overlay{ display:none; position:fixed; inset:0; background:rgba(16,23,42,0.62); z-index:300; align-items:center; justify-content:center; padding:1rem; }
@@ -151,6 +144,23 @@ header.site.mobile-nav-open .nav-toggle span:nth-child(3){ transform:translateY(
 .modal-row a{ color:var(--color-text); text-decoration:none; font-weight:700; }
 .modal-row a:hover{ color:var(--color-accent-text); }
 
+/* ===================== SHOWCASE (image/graphique + texte) ===================== */
+.showcase{ display:grid; grid-template-columns:1fr 1fr; gap:2.6rem; align-items:center; margin-top:1.8rem; }
+.showcase.reverse .showcase-visual{ order:2; }
+.showcase-visual figure{ margin:0; }
+.showcase-visual img{ border-radius:14px; border:1px solid var(--color-border); height:340px; width:100%; object-fit:cover; }
+.showcase-visual figcaption{ text-align:center; font-size:0.8rem; color:var(--color-text-muted); margin-top:0.7rem; }
+.visual-panel{
+  height:340px; border-radius:14px; background:linear-gradient(135deg, var(--color-navy), var(--color-navy-soft));
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem; color:#fff;
+}
+.visual-panel svg{ width:64px; height:64px; stroke:var(--color-gold-soft); fill:none; stroke-width:1.4; }
+.visual-panel span{ font-size:0.8rem; letter-spacing:var(--tracking-label); text-transform:uppercase; color:rgba(255,255,255,0.7); }
+.showcase-text ul{ margin:1rem 0 0; padding-left:1.15rem; }
+.showcase-text li{ margin-bottom:0.7rem; font-size:0.95rem; }
+.showcase-text li strong{ color:var(--color-text); }
+.showcase-text .eyebrow{ display:block; }
+
 /* ===================== CARTES FONCTIONNALITÉS ===================== */
 .feature-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; margin-top:1.8rem; }
 .feature-card{
@@ -162,29 +172,8 @@ header.site.mobile-nav-open .nav-toggle span:nth-child(3){ transform:translateY(
   display:flex; align-items:center; justify-content:center; margin-bottom:1rem;
 }
 .feature-card .icon-circle svg{ width:22px; height:22px; stroke:var(--color-gold-text); fill:none; stroke-width:1.8; }
-.feature-card .icon-circle img.cci-logo{ width:26px; height:auto; display:block; }
+.feature-card h3{ font-size:1.02rem; }
 .feature-card p{ font-size:0.9rem; color:var(--color-text-muted); margin:0; }
-.tag{
-  display:inline-flex; align-items:center; gap:0.35rem;
-  background:var(--page-accent-bg); color:var(--color-gold-text);
-  border-radius:999px; padding:0.28rem 0.75rem; font-size:0.68rem; font-weight:700;
-  letter-spacing:var(--tracking-label); text-transform:uppercase; margin-bottom:0.7rem;
-}
-
-/* ===================== IMPACT BUSINESS ===================== */
-.stat-callout{
-  display:flex; align-items:center; gap:1.8rem; flex-wrap:wrap;
-  background:var(--color-bg-card); border:1px solid var(--color-border); border-radius:14px;
-  padding:2.1rem 2.3rem; margin-top:1.8rem;
-}
-.stat-callout .num{
-  font-family:var(--font-heading); font-size:2.9rem; font-weight:700; line-height:1;
-  color:var(--color-gold-text); white-space:nowrap;
-}
-.stat-callout .num small{ display:block; font-family:var(--font-body); font-weight:600; font-size:0.7rem; letter-spacing:var(--tracking-label); text-transform:uppercase; color:var(--color-text-muted); margin-top:0.4rem; }
-.stat-callout .stat-text{ flex:1; min-width:260px; }
-.stat-callout .stat-text p{ margin:0; font-size:0.95rem; }
-.stat-callout .stat-text p.assumption{ font-size:0.78rem; color:var(--color-text-muted); margin-top:0.6rem; }
 
 /* ===================== SECTION FINALE / CONTACT ===================== */
 .lp-final{ background:var(--color-bg); }
@@ -210,7 +199,7 @@ header.site.mobile-nav-open .nav-toggle span:nth-child(3){ transform:translateY(
 .contact-details a{ color:var(--color-text); text-decoration:none; font-weight:600; }
 .contact-details a:hover{ color:var(--color-accent-text); }
 
-/* ===================== FOOTER (identique au site nathproconseil.fr) ===================== */
+/* ===================== FOOTER ===================== */
 footer.site{ background:var(--color-navy); color:var(--color-text-inverse); padding:2.5rem 4%; margin-top:2rem; }
 footer.site .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem; max-width:1100px; }
 footer.site .logo{ display:flex; align-items:center; }
@@ -235,8 +224,10 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
   .lp-hero h1{ font-size:1.9rem; }
   .cta-big{ white-space:normal; text-align:center; }
   .lp-hero p.lead{ font-size:1.05rem; }
-  .feature-grid, .proof-grid{ grid-template-columns:1fr; }
-  .stat-callout{ flex-direction:column; text-align:center; }
+  .feature-grid{ grid-template-columns:1fr; }
+  .showcase, .showcase.reverse{ grid-template-columns:1fr; }
+  .showcase.reverse .showcase-visual{ order:-1; }
+  .showcase-visual img, .visual-panel{ height:220px; }
   .cta-banner{ flex-direction:column; align-items:flex-start; }
   .contact-strip{ border-radius:16px; }
 }
@@ -255,30 +246,39 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
     <li><a href="https://www.nathproconseil.fr/apropos">Qui sommes-nous ?</a></li>
     <li><a href="https://www.nathproconseil.fr/nos-expertises">Nos expertises</a></li>
     <li><a href="https://www.nathproconseil.fr/#realisations">Nos réalisations</a></li>
-    <li><a href="https://www.nathproconseil.fr/blog">Blog</a></li>
     <li><a class="lp-phone" href="tel:0661243272">📞 06 61 24 32 72</a></li>
   </ul></nav>
 </header>
 
 <section class="lp-hero">
   <div class="wrap">
-    <p class="eyebrow">Formation des Équipes Officinales</p>
-    <h1>Booster le panier moyen de votre office grâce au conseil éthique.</h1>
-    <p class="lead">Une formation sur-mesure dispensé par une experte terrain.</p>
-    <button class="cta-big" onclick="openDevis()">Planifier une formation pour mon équipe</button>
-    <p class="lp-zone">Formations dispensées en Auvergne · Loire · Corrèze · Creuse</p>
+    <p class="eyebrow">Bureaux &amp; postes de travail</p>
+    <h1>Transformer votre façon de travailler</h1>
+    <p class="hero-subtitle">Mettez de l'ergonomie de vos espaces</p>
+    <p class="lead">Distributeur des bureaux électriques LINAK en Auvergne et ses alentours.</p>
+    <button class="cta-big" onclick="openDevis()">Demander mon étude de poste</button>
+    <p class="lp-zone">Installation &amp; réglage · Garantie constructeur 10 ans</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <p class="eyebrow" style="text-align:center;">Le retour sur investissement</p>
-    <h2>L'impact business direct</h2>
-    <div class="stat-callout">
-      <div class="num">+15 000 €<small>de C.A. additionnel / an</small></div>
-      <div class="stat-text">
-        <p>Si chaque collaborateur sécurise un seul conseil associé à 7 € par jour, l'officine génère plus de 15 000 € de chiffre d'affaires additionnel par an. L'investissement dans la formation est rentabilisé en quelques semaines.</p>
-        <p class="assumption">Calcul sur la base d'une équipe de 4 personnes.</p>
+    <p class="eyebrow" style="text-align:center;">Espace entreprise</p>
+    <h2>Le bureau d'entreprise, réinventé</h2>
+    <div class="showcase">
+      <div class="showcase-visual">
+        <figure>
+          <img src="assets/images/bureau-ergonomique.jpg" alt="Bureau assis-debout électrique dans un bureau d'entreprise lumineux, ambiance scandinave, bois clair">
+          <figcaption>Bureau assis-debout électrique — lumière naturelle, bois clair, design épuré</figcaption>
+        </figure>
+      </div>
+      <div class="showcase-text">
+        <p>Un espace de travail moderne et épuré, baigné de lumière naturelle. Hauteur réglable électriquement, finitions bois clair et blanc, lignes scandinaves : le bureau devient un lieu où l'on a envie de rester concentré, sans y laisser son dos.</p>
+        <ul>
+          <li><strong>Levée électrique fluide et silencieuse</strong>, mémorisation des hauteurs par utilisateur.</li>
+          <li><strong>Finitions haut de gamme</strong> — bois clair, blanc, lignes épurées.</li>
+          <li><strong>Adapté à l'open-space</strong> comme aux bureaux individuels et au télétravail.</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -286,27 +286,22 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
 
 <section style="background:var(--color-bg-card); border-top:1px solid var(--color-border); border-bottom:1px solid var(--color-border);">
   <div class="wrap">
-    <p class="eyebrow" style="text-align:center;">La formatrice</p>
-    <h2>Pourquoi cette formation fait la différence</h2>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <div class="icon-circle"><img src="assets/images/cci-logo.png" alt="Certifiée CCI" class="cci-logo"></div>
-        <h3>Une méthodologie certifiée</h3>
-        <p>Titulaire du Certificat de Compétences en Entreprise (CCE) délivré par la CCI comme formatrice en entreprise. Adapté pour le quotidien du comptoir.</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon-circle">
-          <svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9v11h18V9"/><line x1="9" y1="20" x2="9" y2="13"/><line x1="15" y1="20" x2="15" y2="13"/></svg>
+    <p class="eyebrow" style="text-align:center;">Espace technique</p>
+    <h2>L'espace de travail pharmacie &amp; laboratoire, réinventé</h2>
+    <div class="showcase reverse">
+      <div class="showcase-visual">
+        <div class="visual-panel">
+          <svg viewBox="0 0 24 24"><path d="M9 3h6"/><path d="M10 3v6l-6 10a2 2 0 0 0 1.7 3h12.6a2 2 0 0 0 1.7-3l-6-10V3"/><path d="M7 15h10"/></svg>
+          <span>Visuel à venir</span>
         </div>
-        <h3>Pas de théorie hors-sol</h3>
-        <p>18 ans en tant que formatrice pour un laboratoire pharmaceutique majeur. Des techniques de vente éthiques et fluides, applicables dès le lendemain.</p>
       </div>
-      <div class="feature-card">
-        <div class="icon-circle">
-          <svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-        </div>
-        <h3>Sur-mesure et local</h3>
-        <p>Déplacement directement dans les officines en Auvergne, Loire, Corrèze et Creuse pour former les équipes au plus près de leur réalité.</p>
+      <div class="showcase-text">
+        <p>Un plan de travail motorisé et réglable en hauteur, pensé pour les environnements exigeants : laboratoire, arrière-boutique de pharmacie, poste de préparation. Surfaces claires, rangements intégrés, hygiène et ergonomie au cœur de la conception.</p>
+        <ul>
+          <li><strong>Plan de travail motorisé</strong>, adapté aux gestes répétitifs de préparation.</li>
+          <li><strong>Environnement clinique et lumineux</strong>, propice à la concentration.</li>
+          <li><strong>Rangements médicaux intégrés</strong> — piluliers, bacs, accessoires à portée de main.</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -314,29 +309,29 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
 
 <section>
   <div class="wrap">
-    <p class="eyebrow" style="text-align:center;">Le contenu</p>
-    <h2>Les compétences développées au comptoir</h2>
+    <p class="eyebrow" style="text-align:center;">Pourquoi un bureau motorisé</p>
+    <h2>Les avantages du travail en mouvement</h2>
     <div class="feature-grid">
       <div class="feature-card">
         <div class="icon-circle">
-          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
         </div>
-        <h3>Le réflexe du conseil associé</h3>
-        <p>Systématiser le produit complémentaire indispensable à la prescription ou à la parapharmacie.</p>
+        <h3>Boost d'énergie &amp; Concentration</h3>
+        <p>Changer régulièrement de position active la circulation, oxygène le corps et maintient un niveau de vigilance élevé tout au long de la journée.</p>
       </div>
       <div class="feature-card">
         <div class="icon-circle">
-          <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 1 1 6-14.5l2.5-1v7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-12 2 6h6"/></svg>
         </div>
-        <h3>La posture d'expert</h3>
-        <p>Questionner le patient avec bienveillance pour révéler ses besoins latents, sans jamais donner l'impression de « forcer » la vente.</p>
+        <h3>Confort corporel au quotidien</h3>
+        <p>Varier les postures permet de répartir naturellement les appuis physiques, libérant les pressions accumulées en position assise fixe.</p>
       </div>
       <div class="feature-card">
         <div class="icon-circle">
-          <svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
         </div>
-        <h3>La confiance face aux objections</h3>
-        <p>Savoir argumenter sur le prix ou le bénéfice produit avec fluidité, assurance et professionnalisme.</p>
+        <h3>Modernité &amp; Attractivité</h3>
+        <p>Un environnement ergonomique et dynamique valorise l'image de votre entreprise et améliore la satisfaction au quotidien de vos collaborateurs.</p>
       </div>
     </div>
   </div>
@@ -346,10 +341,10 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
   <div class="wrap">
     <div class="cta-banner">
       <div>
-        <strong>Envie de former votre équipe ?</strong>
-        <span>Planifions ensemble une session adaptée au rythme de votre officine.</span>
+        <strong>Un projet en tête ?</strong>
+        <span>Échangeons-en ensemble, sans engagement.</span>
       </div>
-      <button class="cta-big" onclick="openDevis()">Planifier une formation pour mon équipe</button>
+      <button class="cta-big" onclick="openDevis()">Demander un devis</button>
     </div>
     <div class="contact-strip">
       <img class="contact-photo-sm" src="assets/images/nathalie-contact.jpg" alt="Nathalie, fondatrice de NathPro Conseil">
@@ -382,7 +377,7 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
 <div class="modal-overlay" id="devisModal" onclick="closeDevis()">
   <div class="modal-box" onclick="event.stopPropagation()">
     <button class="modal-close" onclick="closeDevis()">✕</button>
-    <h3>Planifier une formation</h3>
+    <h3>Demander mon étude de poste</h3>
     <p class="muted">Contactez-nous directement, nous vous répondrons rapidement.</p>
     <div class="modal-contact">
       <div class="modal-row">📞 <a href="tel:0661243272">06 61 24 32 72</a></div>

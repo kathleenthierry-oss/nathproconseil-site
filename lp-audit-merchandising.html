@@ -72,25 +72,37 @@ section{ padding:3.6rem 0; }
   text-transform:uppercase; color:var(--color-accent-text); margin-bottom:0.7rem;
 }
 
-/* ===================== HEADER ===================== */
-.lp-header{
-  display:flex; align-items:center; justify-content:space-between; gap:1rem;
-  padding:1.1rem 4%; background:var(--color-bg-card); border-bottom:1px solid var(--color-border);
+/* ===================== HEADER / NAV DU SITE ===================== */
+header.site{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:1.2rem 4%;
+  background:var(--color-bg-card);
+  border-bottom:1px solid var(--color-border);
 }
-.lp-header .logo img{ height:36px; display:block; }
-.lp-header-right{ display:flex; align-items:center; gap:1.4rem; }
-.lp-header-link{
-  font-family:var(--font-body); font-weight:600; font-size:0.82rem; color:var(--color-text);
-  text-decoration:none; border-bottom:2px solid transparent; padding-bottom:2px; transition:0.2s; white-space:nowrap;
+header.site .logo{ display:flex; align-items:center; }
+header.site .logo img{ height:38px; width:auto; display:block; }
+nav.site ul{ display:flex; align-items:center; gap:2rem; list-style:none; margin:0; padding:0; }
+nav.site a{
+  color:var(--color-text); text-decoration:none; font-size:0.82rem; font-weight:600;
+  letter-spacing:var(--tracking-label); text-transform:uppercase;
+  border-bottom:2px solid transparent; padding-bottom:4px; transition:0.2s; white-space:nowrap;
 }
-.lp-header-link:hover{ color:var(--color-accent-text); border-bottom-color:var(--color-accent); }
-.lp-phone{
+nav.site a:hover, nav.site a.current{ border-bottom-color:var(--color-accent); color:var(--color-accent-text); }
+nav.site a.lp-phone{
   display:inline-flex; align-items:center; gap:0.5rem;
-  font-family:var(--font-body); font-weight:700; font-size:0.82rem; color:var(--color-text);
-  text-decoration:none; border:1px solid var(--color-border); border-radius:999px;
-  padding:0.5rem 1.1rem; transition:0.2s; white-space:nowrap;
+  font-weight:700; color:var(--color-text);
+  border:1px solid var(--color-border); border-radius:999px;
+  padding:0.5rem 1.1rem; text-transform:none; letter-spacing:normal;
 }
-.lp-phone:hover{ border-color:var(--color-accent); color:var(--color-accent-text); }
+nav.site a.lp-phone:hover{ border-color:var(--color-accent); color:var(--color-accent-text); }
+.nav-toggle{
+  display:none; flex-direction:column; justify-content:center; gap:5px;
+  background:none; border:none; cursor:pointer; padding:0.4rem;
+}
+.nav-toggle span{ width:24px; height:2px; background:var(--color-text); border-radius:2px; transition:0.2s; }
+header.site.mobile-nav-open .nav-toggle span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+header.site.mobile-nav-open .nav-toggle span:nth-child(2){ opacity:0; }
+header.site.mobile-nav-open .nav-toggle span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
 
 /* ===================== HERO ===================== */
 .lp-hero{ padding:4.5rem 0 3.2rem; text-align:center; }
@@ -207,32 +219,41 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
 
 /* ===================== RESPONSIVE ===================== */
 @media (max-width:800px){
-  .lp-header{ padding:1rem 5%; }
+  header.site{ position:relative; padding:1rem 5%; }
+  .nav-toggle{ display:flex; }
+  nav.site ul{
+    display:none; position:absolute; top:100%; right:4%; left:auto;
+    flex-direction:column; align-items:flex-start; gap:1rem; margin-top:0.6rem;
+    background:var(--color-bg-card); border:1px solid var(--color-border);
+    border-radius:10px; padding:1.2rem 1.6rem; min-width:210px;
+    box-shadow:0 12px 32px rgba(0,0,0,.18); z-index:80;
+  }
+  header.site.mobile-nav-open nav.site ul{ display:flex; }
   .lp-hero h1{ font-size:1.9rem; }
   .cta-big{ white-space:normal; text-align:center; }
   .lp-hero p.lead{ font-size:1.05rem; }
   .feature-grid, .steps-3, .proof-grid{ grid-template-columns:1fr; }
-  .lp-header-right{ gap:0.7rem; }
-  .lp-header-link{ display:none; }
   .cta-banner{ flex-direction:column; align-items:flex-start; }
   .contact-strip{ border-radius:16px; }
 }
 @media (max-width:420px){
-  .lp-phone-num{ display:none; }
-  .lp-phone{ padding:0.5rem 0.8rem; }
-  .lp-header .logo img{ height:30px; }
+  header.site .logo img{ height:30px; }
 }
 </style>
 </head>
 <body>
 
-<header class="lp-header">
+<header class="site">
   <a class="logo" href="https://www.nathproconseil.fr/" aria-label="NathPro Conseil"><img src="assets/images/logo-bleu.png" alt="NathPro Conseil"></a>
-  <div class="lp-header-right">
-    <a class="lp-header-link" href="https://www.nathproconseil.fr/#realisations">Nos réalisations</a>
-    <a class="lp-header-link" href="https://www.nathproconseil.fr/blog">Blog</a>
-    <a class="lp-phone" href="tel:0661243272">📞 <span class="lp-phone-num">06 61 24 32 72</span></a>
-  </div>
+  <button class="nav-toggle" aria-label="Ouvrir le menu" onclick="this.closest('header').classList.toggle('mobile-nav-open')"><span></span><span></span><span></span></button>
+  <nav class="site"><ul>
+    <li><a href="https://www.nathproconseil.fr/">Accueil</a></li>
+    <li><a href="https://www.nathproconseil.fr/apropos">Qui sommes-nous ?</a></li>
+    <li><a href="https://www.nathproconseil.fr/nos-expertises">Nos expertises</a></li>
+    <li><a href="https://www.nathproconseil.fr/#realisations">Nos réalisations</a></li>
+    <li><a href="https://www.nathproconseil.fr/blog">Blog</a></li>
+    <li><a class="lp-phone" href="tel:0661243272">📞 06 61 24 32 72</a></li>
+  </ul></nav>
 </header>
 
 <section class="lp-hero">
