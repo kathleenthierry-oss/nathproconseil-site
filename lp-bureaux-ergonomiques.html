@@ -199,6 +199,12 @@ header.site.mobile-nav-open .nav-toggle span:nth-child(3){ transform:translateY(
 .faq-item:first-child{ padding-top:0; }
 .faq-item h3{ font-size:1rem; margin-bottom:0.4rem; }
 .faq-item p{ font-size:0.9rem; color:var(--color-text-muted); margin:0; }
+.faq-disclaimer{
+  max-width:760px; margin:2rem auto 0; padding:1.2rem 1.4rem;
+  background:var(--color-bg); border:1px solid var(--color-border); border-radius:10px;
+}
+.faq-disclaimer p{ font-size:0.76rem; line-height:1.6; color:var(--color-text-muted); margin:0; }
+.faq-disclaimer strong{ color:var(--color-text); }
 
 /* ===================== SECTION FINALE / CONTACT ===================== */
 .lp-final{ background:var(--color-bg); }
@@ -325,7 +331,7 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
 <section style="background:var(--color-bg-card); border-top:1px solid var(--color-border); border-bottom:1px solid var(--color-border);">
   <div class="wrap">
     <p class="eyebrow" style="text-align:center;">La solution</p>
-    <h2>Des bureaux électriques LINAK, référence mondiale du secteur</h2>
+    <h2>Des bureaux électriques LINAK</h2>
     <div class="solution-row">
       <img src="assets/images/bureau-ergonomique.jpg" alt="Bureau assis-debout électrique Linak en position debout">
       <ul>
@@ -342,7 +348,7 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
   <div class="wrap">
     <p class="eyebrow" style="text-align:center;">Pour qui</p>
     <h2>Des postes pensés pour votre métier</h2>
-    <div class="feature-grid">
+    <div class="feature-grid" style="grid-template-columns:repeat(2,1fr);">
       <div class="feature-card">
         <div class="icon-circle">
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
@@ -363,6 +369,14 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
         </div>
         <h3>Bureaux &amp; télétravail</h3>
         <p>Poste administratif classique ou espace de télétravail : le même confort, pour limiter la sédentarité au quotidien.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/><line x1="3" y1="21" x2="21" y2="21"/></svg>
+        </div>
+        <h3>Espaces d'Accueil &amp; Vente Mixte (PMR)</h3>
+        <p><strong>Accessibilité universelle :</strong> intégration de sections de comptoirs abaissées conformes (70 à 85 cm) avec vide sanitaire pour un accueil client optimal.</p>
+        <p><strong>Relation client dynamique :</strong> facilite l'interaction naturelle et confortable entre le personnel et le public.</p>
       </div>
     </div>
   </div>
@@ -392,12 +406,8 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
 <section>
   <div class="wrap">
     <p class="eyebrow" style="text-align:center;">Questions fréquentes</p>
-    <h2>Ce qu'on nous demande le plus souvent</h2>
+    <h2>Questions Fréquentes (FAQ)</h2>
     <div class="faq-list">
-      <div class="faq-item">
-        <h3>Le bureau est-il livré et installé ?</h3>
-        <p>Oui. Je me déplace pour l'installation, le réglage des hauteurs et la mise en main de votre équipe.</p>
-      </div>
       <div class="faq-item">
         <h3>Est-ce adapté au télétravail ?</h3>
         <p>Tout à fait, les mêmes bureaux électriques s'installent aussi bien en entreprise qu'à domicile.</p>
@@ -407,9 +417,20 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
         <p>Les moteurs et la structure sont garantis 10 ans par LINAK, référence mondiale des systèmes de levage électriques.</p>
       </div>
       <div class="faq-item">
-        <h3>Combien de temps pour recevoir un devis ?</h3>
-        <p>Sous 48h ouvrées après notre échange, avec un chiffrage adapté au nombre de postes et à votre configuration.</p>
+        <h3>Puis-je obtenir une subvention CARSAT à coup sûr pour ces installations ?</h3>
+        <p>Non, le versement d'une aide financière n'est jamais automatique ou garanti d'avance. Les équipements motorisés par LINAK et assemblés par Les Ateliers Sagnol sont techniquement conçus selon les critères de l'Assurance Maladie, ce qui permet à chaque entreprise d'initier une demande. L'obtention de la subvention dépend exclusivement des critères administratifs de votre entreprise et de la décision souveraine de votre caisse régionale CARSAT.</p>
       </div>
+      <div class="faq-item">
+        <h3>Quelle est la réglementation technique concernant ces meubles motorisés ?</h3>
+        <p>Le mobilier fini est régi par la Directive Machines européenne (2006/42/CE) et la norme NF EN 1570-1 : 2024. Notre partenaire de fabrication (Les Ateliers Sagnol) s'engage sur ces critères en vous fournissant une Déclaration de Conformité CE lors de la livraison, un document clé si vous choisissez de constituer un dossier d'aide financière.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Est-ce NathPro Conseil qui livre et installe le mobilier ?</h3>
+        <p>Non. NathPro Conseil est un cabinet de conseil indépendant. Notre mission est de vous auditer, de vous guider et de concevoir des plans d'implantations ergonomiques adaptés. La vente, la fabrication sur-mesure et l'installation physique chez vous sont confiées directement à notre partenaire : Les Ateliers Sagnol.</p>
+      </div>
+    </div>
+    <div class="faq-disclaimer">
+      <p><strong>Clauses d'information et limites de responsabilité :</strong> NathPro Conseil est une entité de conseil et d'étude ergonomique indépendante en aménagement d'espace. NathPro Conseil ne fabrique pas, ne vend pas et n'installe pas de matériel, et ne procède à aucune démarche administrative ou financière au nom de ses clients. Les motorisations LINAK (couvertes par la garantie constructeur de 10 ans) et les structures fabriquées par Les Ateliers Sagnol répondent aux standards de qualité exigés par le cahier des charges de la CARSAT. L'éligibilité et l'attribution des subventions financières relèvent de la responsabilité unique de l'entreprise cliente, qui doit soumettre son dossier sur la plateforme Net-Entreprises. L'accord final reste soumis à la validation des budgets et critères internes de votre CARSAT régionale. NathPro Conseil ne peut être tenu responsable d'un éventuel refus de prise en charge financière.</p>
     </div>
   </div>
 </section>
