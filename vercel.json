@@ -63,6 +63,38 @@
       "destination": "/blog-guide-reamenagement.html"
     },
     {
+      "source": "/blog/poste-preparation-piluliers-pda-ergonomie",
+      "destination": "/blog-poste-preparation-piluliers-pda-ergonomie.html"
+    },
+    {
+      "source": "/blog/conseil-associe-pharmacie-equipe",
+      "destination": "/blog-conseil-associe-pharmacie-equipe.html"
+    },
+    {
+      "source": "/blog/preparer-projet-modernisation-point-de-vente",
+      "destination": "/blog-preparer-projet-modernisation-point-de-vente.html"
+    },
+    {
+      "source": "/blog/ergonomie-opticien-atelier-plan-de-travail",
+      "destination": "/blog-ergonomie-opticien-atelier-plan-de-travail.html"
+    },
+    {
+      "source": "/blog/audit-point-de-vente-pharmacie-que-regarder",
+      "destination": "/blog-audit-point-de-vente-pharmacie-que-regarder.html"
+    },
+    {
+      "source": "/blog/merchandising-pharmacie-ma-methode",
+      "destination": "/blog-merchandising-pharmacie-ma-methode.html"
+    },
+    {
+      "source": "/blog/zone-de-conseil-pharmacie-erreurs",
+      "destination": "/blog-zone-de-conseil-pharmacie-erreurs.html"
+    },
+    {
+      "source": "/blog/espace-de-confidentialite-pharmacie",
+      "destination": "/blog-espace-de-confidentialite-pharmacie.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
