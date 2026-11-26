@@ -2,6 +2,27 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<!-- Axeptio : bandeau de consentement aux cookies -->
+<script>
+window.axeptioSettings = {
+  clientId: "6b080abfc745241306abe538",
+  cookiesVersion: "fr-fr-gpdr-26-11-2026",
+  googleConsentMode: {
+    default: {
+      analytics_storage: "denied",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      wait_for_update: 500
+    }
+  }
+};
+(function(d, s) {
+  var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+  e.async = true; e.src = "https://static.axept.io/sdk.js";
+  t.parentNode.insertBefore(e, t);
+})(document, "script");
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mentions légales, CGV et RGPD — NathPro Conseil</title>
 <meta name="description" content="Mentions légales, conditions générales et politique de confidentialité (RGPD) du site NathPro Conseil.">
@@ -139,6 +160,12 @@ footer.site .footer-social a{ display:flex; align-items:center; justify-content:
 footer.site .footer-social a:hover{ background:var(--color-gold); }
 footer.site .footer-social svg{ width:16px; height:16px; stroke:rgba(255,255,255,0.85); fill:none; stroke-width:1.8; transition:0.2s; }
 footer.site .footer-social a:hover svg{ stroke:var(--color-navy); }
+/* Couleurs officielles des réseaux */
+footer.site .footer-social a[aria-label="LinkedIn"]{ background:#0A66C2; }
+footer.site .footer-social a[aria-label="Facebook"]{ background:#1877F2; }
+footer.site .footer-social a[aria-label="Instagram"]{ background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+footer.site .footer-social a[aria-label] svg, footer.site .footer-social a[aria-label]:hover svg{ stroke:#fff; }
+footer.site .footer-social a[aria-label]:hover{ transform:translateY(-2px); filter:brightness(1.1); }
 footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.5rem; width:100%; }
 
 @media (max-width:640px){
@@ -188,7 +215,7 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
     <h2>1. Éditeur du site</h2>
     <div class="id-card">
       <dl>
-        <dt>Dénomination sociale</dt><dd>NATH Pro Conseil</dd>
+        <dt>Dénomination sociale</dt><dd>NathPro Conseil</dd>
         <dt>Nom commercial</dt><dd>NathPro Conseil</dd>
         <dt>Forme juridique</dt><dd>SASU au capital de 500 €</dd>
         <dt>Siège social</dt><dd>8 Rue Anatole France, 63360 Gerzat</dd>
@@ -219,22 +246,23 @@ footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.
 
   <section id="cgv">
     <h2>4. Conditions générales</h2>
-    <p><strong>Objet.</strong> Les présentes conditions régissent l'utilisation du site nathproconseil.fr et les prestations d'audit, de merchandising, de coaching et de conseil en agencement et en ergonomie du poste de travail proposées par NathPro Conseil (« le Prestataire »).</p>
+    <p><strong>Objet.</strong> Les présentes conditions régissent l'utilisation du site nathproconseil.fr et les prestations d'audit, de merchandising, de coaching et de conseil en agencement et sur le poste de travail ergonomique proposées par NathPro Conseil (« le Prestataire »).</p>
     <p><strong>Devis et commande.</strong> Chaque prestation, y compris l'audit flash, fait l'objet d'un devis écrit préalable ; la commande est ferme à réception de l'acceptation du devis par l'entreprise cliente (« le Client »). Le site ne permet pas de commande ni de paiement en ligne.</p>
     <p><strong>Rôle et limites.</strong> Les audits, conseils et préconisations de NathPro Conseil sont des aides à la décision : le Client reste seul décisionnaire. NathPro Conseil n'intervient pas dans la conception technique, les plans d'exécution, la réalisation ni le suivi des travaux. Ces missions relèvent de l'agenceur, de l'architecte ou des entreprises choisis par le Client, avec lesquels le Client contracte directement ; NathPro Conseil n'est pas partie à ces contrats et n'est pas responsable de leur exécution.</p>
     <p><strong>Responsabilité.</strong> NathPro Conseil est tenue d'une obligation de moyens. Aucun résultat n'est garanti, notamment en matière de chiffre d'affaires. Sa responsabilité est limitée aux dommages directs et, sauf faute lourde ou dolosive, plafonnée au montant des honoraires perçus pour la prestation concernée.</p>
     <p><strong>Clients professionnels.</strong> Les prestations s'adressant exclusivement à des professionnels, le droit de rétractation (articles L. 221-18 et suivants du Code de la consommation) ne s'applique pas.</p>
+    <p><strong>Prix et paiement.</strong> Les prix sont ceux du devis, hors taxes. Les factures sont payables sous 30 jours ; tout retard entraîne des pénalités de retard et l'indemnité forfaitaire de 40 € pour frais de recouvrement (articles L. 441-10 et D. 441-5 du Code de commerce).</p>
   </section>
 
   <section id="rgpd">
     <h2>5. Politique de confidentialité (RGPD)</h2>
     <p><strong>Responsable de traitement.</strong> NathPro Conseil (coordonnées section 1).</p>
-    <p><strong>Données collectées.</strong> Le site ne contient aucun formulaire ni traceur publicitaire. Sont traitées : les données transmises volontairement par téléphone ou e-mail (nom, coordonnées, contenu du message) ; pour l'audit flash, après commande, les réponses à un questionnaire et des photos du point de vente, sans personne identifiable ; les coordonnées professionnelles de prospects (nom, fonction, entreprise, e-mail) issues d'annuaires professionnels et de LinkedIn.</p>
+    <p><strong>Données collectées.</strong> Le site ne contient aucun formulaire ni traceur publicitaire. Sont traitées : les données transmises volontairement par téléphone ou e-mail (nom, coordonnées, contenu du message) ; pour une prestation d'audit à distance, le cas échéant, les réponses à un questionnaire et des photos du point de vente, sans personne identifiable ; les coordonnées professionnelles de prospects (nom, fonction, entreprise, e-mail) issues d'annuaires professionnels et de LinkedIn.</p>
     <p><strong>Finalité et base légale.</strong> Traitement des demandes, gestion de la relation client, réalisation des prestations (exécution de mesures précontractuelles ou contractuelles) et prospection commerciale auprès de professionnels (intérêt légitime). Vous pouvez vous opposer à tout moment à la prospection ; un lien de désinscription figure dans chaque e-mail de prospection.</p>
-    <p><strong>Durée de conservation.</strong> 3 ans après le dernier contact pour un simple prospect ; durée de la relation commerciale augmentée des obligations comptables (10 ans) pour un client ; questionnaire et photos de l'audit flash : 12 mois maximum après la prestation.</p>
+    <p><strong>Durée de conservation.</strong> 3 ans après le dernier contact pour un simple prospect ; durée de la relation commerciale augmentée des obligations comptables (10 ans) pour un client ; questionnaire et photos : 12 mois maximum après la prestation.</p>
     <p><strong>Destinataires.</strong> NathPro Conseil, son hébergeur pour les besoins techniques du site, et les outils utilisés pour le questionnaire et l'envoi des e-mails, en tant que sous-traitants.</p>
     <p><strong>Transferts hors UE.</strong> L'hébergeur (Vercel Inc., États-Unis) et les polices Google Fonts chargées depuis les serveurs de Google LLC peuvent entraîner la transmission de l'adresse IP hors de l'Union européenne.</p>
-    <p><strong>Cookies.</strong> Aucun cookie de mesure d'audience ou publicitaire n'est déposé par le site.</p>
+    <p><strong>Cookies.</strong> Le site utilise la solution Axeptio pour recueillir votre consentement. Aucun cookie de mesure d'audience ou publicitaire n'est déposé sans votre accord préalable. Vous pouvez modifier vos choix à tout moment : <a href="#" onclick="openAxeptioCookies(); return false;">gérer mes cookies</a>.</p>
     <p><strong>Vos droits.</strong> Accès, rectification, effacement, limitation, opposition et portabilité, à exercer auprès de <a href="mailto:Nathalie.f@nathproconseil.fr">Nathalie.f@nathproconseil.fr</a>. Réclamation possible auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>).</p>
   </section>
 

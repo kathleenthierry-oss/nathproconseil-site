@@ -2,9 +2,30 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<!-- Axeptio : bandeau de consentement aux cookies -->
+<script>
+window.axeptioSettings = {
+  clientId: "6b080abfc745241306abe538",
+  cookiesVersion: "fr-fr-gpdr-26-11-2026",
+  googleConsentMode: {
+    default: {
+      analytics_storage: "denied",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      wait_for_update: 500
+    }
+  }
+};
+(function(d, s) {
+  var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+  e.async = true; e.src = "https://static.axept.io/sdk.js";
+  t.parentNode.insertBefore(e, t);
+})(document, "script");
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Audit, merchandising et conseil en agencement en Auvergne | NathPro Conseil</title>
-<meta name="description" content="Audit, merchandising, coaching des équipes, conseil en agencement et en ergonomie pour pharmacies, opticiens, métiers de bouche et entreprises en Auvergne.">
+<meta name="description" content="Audit, merchandising et coaching des équipes pour les pharmacies ; conseil en agencement et sur le poste de travail pour pharmacies, opticiens, métiers de bouche et entreprises en Auvergne.">
 <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 <link rel="apple-touch-icon" href="/assets/images/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -281,6 +302,12 @@ footer.site .footer-social a{ display:flex; align-items:center; justify-content:
 footer.site .footer-social a:hover{ background:var(--color-gold); }
 footer.site .footer-social svg{ width:16px; height:16px; stroke:rgba(255,255,255,0.85); fill:none; stroke-width:1.8; transition:0.2s; }
 footer.site .footer-social a:hover svg{ stroke:var(--color-navy); }
+/* Couleurs officielles des réseaux */
+footer.site .footer-social a[aria-label="LinkedIn"]{ background:#0A66C2; }
+footer.site .footer-social a[aria-label="Facebook"]{ background:#1877F2; }
+footer.site .footer-social a[aria-label="Instagram"]{ background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+footer.site .footer-social a[aria-label] svg, footer.site .footer-social a[aria-label]:hover svg{ stroke:#fff; }
+footer.site .footer-social a[aria-label]:hover{ transform:translateY(-2px); filter:brightness(1.1); }
 footer.site .copy{ font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1.5rem; width:100%; }
 
 
@@ -525,6 +552,7 @@ figure.project-card{ margin:0; }
 .domains-grid .flip-card:last-child:nth-child(3n+1){ grid-column:2; }
 .exp-figure{ margin:0; }
 .exp-section .exp-row .exp-figure img.ph{ height:200px; width:100%; }
+.exp-tag{ display:inline-block; background:var(--color-gold-soft); color:var(--color-navy); border-radius:999px; padding:0.2rem 0.7rem; font-size:0.66rem; margin-left:0.4rem; vertical-align:middle; }
 .exp-note{ font-size:0.85rem; color:var(--color-text-muted); font-style:italic; margin:0.9rem 0 0; }
 .carsat-box{ margin-top:0.9rem; padding:0.8rem 1rem; background:var(--color-cream); border-left:3px solid var(--color-gold); border-radius:6px; font-size:0.88rem; }
 .exp-actions{ display:flex; align-items:center; gap:1.4rem; flex-wrap:wrap; margin-top:1.2rem; }
@@ -608,11 +636,11 @@ figure.project-card{ margin:0; }
 
     <section class="hero">
       <figure class="hero-figure">
-        <img class="ph" src="/assets/images/accueil-pharmacie-ia.jpg" alt="Visuel IA : pharmacie contemporaine, comptoirs ordonnances et conseil, espace nature et aromathérapie" width="1600" height="900" fetchpriority="high">
+        <img class="ph" src="/assets/images/accueil-pharmacie-ia.jpg" alt="Visuel IA : pharmacie moderne et design, comptoirs ordonnances et conseil, espace nature et aromathérapie" width="1600" height="900" fetchpriority="high">
         <figcaption class="ai-caption">Visuel NathPro Conseil, créé avec l'IA</figcaption>
       </figure>
       <div>
-        <p class="eyebrow" style="line-height:2;">Audit · Merchandising · Conseil en agencement<br>Ergonomie du poste de travail</p>
+        <p class="eyebrow" style="line-height:2;">Audit · Merchandising · Conseil en agencement ·<br>Ergonomie du poste de travail</p>
         <h1 class="hero-title">Audit, merchandising et conseil en agencement en Auvergne</h1>
         <p class="lead">Mon engagement : vous aider à faire de votre espace un lieu qui vous ressemble, qui attire vos clients et qui facilite leur parcours.</p>
       </div>
@@ -759,12 +787,22 @@ figure.project-card{ margin:0; }
         <figure class="project-card" data-cat="pharmacie">
           <img class="ph-img" src="/assets/images/ambiances/pharmacie/pharmacie-moderne-vue-validee.jpg" alt="Visuel IA : pharmacie" width="1200" height="675" loading="lazy">
           <figcaption class="ai-caption">Visuel NathPro Conseil, créé avec l'IA</figcaption>
-          <div class="name">Ambiance contemporaine</div>
+          <div class="name">Ambiance moderne et design</div>
+        </figure>
+        <figure class="project-card" data-cat="pharmacie">
+          <img class="ph-img" src="/assets/images/ambiances/pharmacie/pharmacie-bureau-piluliers.jpg" alt="Visuel IA : postes de préparation des piluliers assis-debout en pharmacie" width="900" height="985" loading="lazy" style="object-position:center 35%">
+          <figcaption class="ai-caption">Visuel NathPro Conseil, créé avec l'IA</figcaption>
+          <div class="name">Poste de préparation des piluliers</div>
         </figure>
         <figure class="project-card" data-cat="optique">
           <img class="ph-img" src="/assets/images/ambiances/optique/optic-terracotta-sauge-design.jpg" alt="Visuel IA : opticien" width="1200" height="675" loading="lazy">
           <figcaption class="ai-caption">Visuel NathPro Conseil, créé avec l'IA</figcaption>
           <div class="name">Ambiance claire et lumineuse</div>
+        </figure>
+        <figure class="project-card" data-cat="optique">
+          <img class="ph-img" src="/assets/images/ambiances/optique/optic-atelier-visuel-optique.jpg" alt="Visuel IA : atelier d'opticien avec postes de travail ergonomiques" width="900" height="1124" loading="lazy" style="object-position:center 55%">
+          <figcaption class="ai-caption">Visuel NathPro Conseil, créé avec l'IA</figcaption>
+          <div class="name">Atelier optique ergonomique</div>
         </figure>
         <figure class="project-card" data-cat="boulangerie">
           <img class="ph-img" src="/assets/images/ambiances/boulangerie/05-boulangerie-patisserie-chaleureuse-gourmande.jpg" alt="Visuel IA : boulangerie-pâtisserie" width="1200" height="675" loading="lazy">
@@ -774,7 +812,7 @@ figure.project-card{ margin:0; }
         <figure class="project-card" data-cat="boucherie">
           <img class="ph-img" src="/assets/images/ambiances/boucherie/boucherie-charcuterie-traiteur-vitrine-unique.jpg" alt="Visuel IA : boucherie-charcuterie" width="1200" height="676" loading="lazy">
           <figcaption class="ai-caption">Visuel NathPro Conseil, créé avec l'IA</figcaption>
-          <div class="name">Ambiance contemporaine</div>
+          <div class="name">Ambiance moderne et design</div>
         </figure>
         <figure class="project-card" data-cat="fromagerie">
           <img class="ph-img" src="/assets/images/ambiances/fromagerie/14-fromagerie-campagne-vue-diagonale.jpg" alt="Visuel IA : fromagerie" width="1200" height="800" loading="lazy">
@@ -1339,8 +1377,8 @@ figure.project-card{ margin:0; }
       </div>
       <div class="about-unified-story">
         <p class="eyebrow">Mon histoire</p>
-        <p>Après plus de 30 ans à arpenter le terrain dans le milieu pharmaceutique, dans le domaine commercial, le merchandising et l'accompagnement des équipes, j'ai voulu mettre cette expérience au service d'un sujet qui me passionne : l'organisation et la modernisation des espaces professionnels.</p>
-        <p>Complétée par une formation de décoratrice en design d'espace, j'accompagne aujourd'hui, en Auvergne et alentours, les commerçants et professionnels dans leur projet de modernisation et dans l'amélioration de leurs conditions de travail.</p>
+        <p>Après plus de 30 ans à arpenter le terrain dans le milieu pharmaceutique (commerce, merchandising et formation), j'ai voulu mettre cette expérience au service d'un métier qui me passionne vraiment : repenser les espaces professionnels.</p>
+        <p>Complétée par une formation en décoration et design d'espace, j'accompagne les commerçants et professionnels d'Auvergne et de ses alentours dans leur projet de modernisation et dans l'amélioration de leurs conditions de travail : conseil sur le poste de travail, aide pour clarifier vos critères de choix d'un agenceur ou d'un architecte et, pour les pharmacies, audit, merchandising et coaching des équipes.</p>
         <p style="margin:0;"><a class="exp-more-link" style="margin-top:0;" href="/blog/histoire-de-nathalie">Lire mon parcours complet <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
       </div>
     </div>
@@ -1435,7 +1473,7 @@ figure.project-card{ margin:0; }
     <div class="expertise-intro">
       <p class="eyebrow">Mes expertises</p>
       <h1 style="font-size:1.8rem;">Quatre savoir-faire, un seul objectif</h1>
-      <p class="muted">Que vous ayez besoin de repenser un espace, d'améliorer le confort de travail, d'optimiser vos ventes ou de coacher vos équipes, chaque expertise répond à un besoin concret, et toutes peuvent se combiner selon votre projet.</p>
+      <p class="muted">Que vous ayez besoin de repenser un espace, d'améliorer le confort de travail, d'optimiser votre espace de vente ou de coacher vos équipes, chaque expertise répond à un besoin concret, et toutes peuvent se combiner selon votre projet.</p>
     </div>
 
     <div class="expertise-nav">
@@ -1455,12 +1493,12 @@ figure.project-card{ margin:0; }
           <div class="exp-icon"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9v11h18V9"/><line x1="9" y1="20" x2="9" y2="13"/><line x1="15" y1="20" x2="15" y2="13"/></svg></div>
           <p class="eyebrow">Conseil en agencement</p>
           <h3>Un accompagnement pour votre projet de modernisation</h3>
-          <p class="muted">Je vous aide à définir votre besoin, je peux vous orienter vers des agenceurs ou des architectes et vous aider à clarifier vos critères de choix. Le choix et le contrat restent entre vous et le professionnel. Quand il vous présente ses plans, je les regarde avec vous sous l'angle du merchandising et je vous remets mes préconisations.</p>
+          <p class="muted">Je vous aide à définir votre besoin, je peux vous orienter vers des agenceurs ou des architectes et vous aider à clarifier vos critères de choix. Le choix et le contrat restent entre vous et le professionnel. Pour les pharmacies, je regarde aussi les plans avec vous sous l'angle du merchandising et je vous remets mes préconisations.</p>
           <ul>
             <li>Cahier des charges et définition de votre besoin</li>
             <li>Orientation vers des agenceurs et des architectes</li>
             <li>Clarification de vos critères de choix</li>
-            <li>Regard merchandising sur les plans de l'agenceur ou de l'architecte</li>
+            <li>Pour les pharmacies : regard merchandising sur les plans de l'agenceur ou de l'architecte</li>
           </ul>
           <p class="exp-note">Les aspects techniques et réglementaires (plans d'exécution, normes, accessibilité, sécurité) relèvent de l'agenceur ou de l'architecte.</p>
           <a class="exp-more-link" href="/agencement-mobilier">En savoir plus <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -1470,17 +1508,17 @@ figure.project-card{ margin:0; }
 
     <div class="exp-section" id="exp-ergonomie">
       <div class="exp-row">
-        <img class="ph" src="/assets/images/bureau-ergonomique.jpg" alt="Bureaux assis-debout électriques dans un espace de travail" loading="lazy">
+        <img class="ph" src="/assets/images/bureaux-nathpro-deux-personnes.jpg" style="object-position:center 45%" alt="Bureaux assis-debout électriques dans un espace de travail" loading="lazy">
         <div>
           <div class="exp-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
           <p class="eyebrow">Conseil en ergonomie du poste de travail</p>
-          <h3>Le confort au service de la performance</h3>
+          <h3>Le confort au quotidien</h3>
           <p class="muted">Chaque métier a ses gestes et ses contraintes : bureau, plan de préparation des piluliers en pharmacie, poste d'atelier de l'opticien, plan de travail en métiers de bouche. Je vous conseille sur le poste de travail adapté à votre activité.</p>
           <ul>
             <li>Bureaux et plans de travail assis-debout électriques, pour le bureau, la préparation des piluliers en pharmacie, l'atelier de l'opticien ou le laboratoire</li>
-            <li>Conseils d'aménagement ergonomique du poste</li>
+            <li>Conseils sur le poste de travail</li>
             <li>Solutions adaptées au bureau comme au télétravail</li>
-            <li>Un meilleur confort au quotidien</li>
+            <li>Un poste adapté à votre activité</li>
           </ul>
           <p class="exp-note">Solutions de bureaux et plans de travail assis-debout électriques, adaptées à chaque métier.</p>
           <div class="carsat-box">Certaines entreprises peuvent bénéficier d'une aide de leur Carsat pour des équipements d'ergonomie. Les conditions varient selon votre entreprise et se vérifient avant tout achat auprès de votre caisse.</div>
@@ -1564,7 +1602,7 @@ figure.project-card{ margin:0; }
         </div>
         <div>
           <div class="exp-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M5 21c0-4 3-6 7-6s7 2 7 6"/></svg></div>
-          <p class="eyebrow">Coaching : conseil associé et merchandising</p>
+          <p class="eyebrow">Coaching : conseil associé et merchandising <span class="exp-tag">Pour les pharmacies</span></p>
           <h3>Des équipes à l'aise dans le conseil, sur le terrain</h3>
           <p class="muted">Le meilleur apprentissage se vit au comptoir, au contact de vos clients. Je coache votre équipe sur place, à partir de situations réelles, pour un conseil plus complet et un espace de vente qui aide vos clients à trouver ce dont ils ont besoin.</p>
           <ul>
@@ -1698,7 +1736,7 @@ const PATH_PAGES = { '/': 'accueil', '/qui-suis-je': 'apropos', '/mes-expertises
 const PAGE_SEO = {
   accueil: {
     title: "Audit, merchandising et conseil en agencement en Auvergne | NathPro Conseil",
-    description: "Audit, merchandising, coaching des équipes, conseil en agencement et en ergonomie pour pharmacies, opticiens, métiers de bouche et entreprises en Auvergne."
+    description: "Audit, merchandising et coaching des équipes pour les pharmacies ; conseil en agencement et sur le poste de travail pour pharmacies, opticiens, métiers de bouche et entreprises en Auvergne."
   },
   apropos: {
     title: "Qui suis-je ? — NathPro Conseil",
